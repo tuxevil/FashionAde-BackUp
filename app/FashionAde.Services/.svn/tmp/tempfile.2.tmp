@@ -1,0 +1,1159 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using FashionAde.Core.OutfitEngine;
+using FashionAde.Core.Clothing;
+using FashionAde.Core;
+using FashionAde.Core.DataInterfaces;
+using SharpArch.Core;
+using System.Configuration;
+using System.IO;
+using FashionAde.Core.ThirdParties;
+
+namespace FashionAde.Services
+{
+    public class OutfitEngineProcessor : IOutfitEngineProcessor
+    {
+        #region Private Properties
+
+        private HashSet<PreOutfit> outfits = new HashSet<PreOutfit>();
+        private HashSet<Combination> flavorCombinations = new HashSet<Combination>();
+
+        private HashSet<Garment> newGarments = null;
+
+        private IList<StyleRule> lstStyleRules = null;
+        private IList<FashionFlavor> currentFlavors = null;
+        private IList<Garment> currentGarments = null;
+        private FashionFlavor currentFlavor = null;
+
+        private log4net.ILog logger;
+        private readonly IStyleRuleRepository styleRuleRepository;
+        private readonly IClosetRepository closetRepository;
+        private string fileName;
+
+        private string SharePath
+        {
+            get { return ConfigurationManager.AppSettings["OutfitEngine_SharePath"].ToString(); }
+        }
+
+        private string LocalDatabasePath
+        {
+            get { return ConfigurationManager.AppSettings["OutfitEngine_DatabaseFilePath"].ToString(); }
+        }
+
+        #endregion
+
+        #region Constructors
+
+        public OutfitEngineProcessor(IStyleRuleRepository styleRuleRepository,
+            IClosetRepository closetRepository)
+        {
+            Check.Require(styleRuleRepository != null, "styleRuleRepository may not be null");
+            Check.Require(closetRepository != null, "closetRepository may not be null");
+            this.styleRuleRepository = styleRuleRepository;
+            this.closetRepository = closetRepository;
+            logger = log4net.LogManager.GetLogger(this.GetType().Namespace);
+        }
+
+        #endregion
+
+        #region IOutfitEngineProcessor Members
+
+        private IList<FashionFlavor> fashionFlavors = new List<FashionFlavor>();
+        public IList<FashionFlavor> FashionFlavors
+        {
+            get { return fashionFlavors; }
+            set { fashionFlavors = value; }
+        }
+
+        public IList<Garment> Garments
+        {
+            get { return currentGarments; }
+            set { currentGarments = value; }
+        }
+
+        public virtual Closet Closet { get; set; }
+
+        public bool HasValidCombinations()
+        {
+            currentFlavors = FashionFlavors;
+            currentGarments = Garments;
+            lstStyleRules = styleRuleRepository.GetAll();
+
+            return ExecuteOutfitGenerator(null, false);
+        }
+
+        public bool CreateCombinations()
+        {
+            return CreateCombinations(null);
+        }
+
+        public bool CreateCombinations(IList<Garment> addedGarments)
+        {
+            Check.Require(FashionFlavors.Count > 0, "Flavors must be included");
+            Check.Require(Garments.Count > 0, "Garments must be included");
+            Check.Require(Closet != null, "Closet is required");
+
+            lstStyleRules = styleRuleRepository.GetAll();
+            currentFlavors = FashionFlavors;
+            currentGarments = Garments;
+
+            return ExecuteOutfitGenerator(addedGarments,true);
+        }
+
+        #endregion
+
+        #region Execute Sets
+
+        private IList<Garment> lstGarments;
+        private IList<Garment> lstAccesories;
+        private bool createRecords;
+        private IEnumerable<Combination> accesories1;
+        private IEnumerable<Combination> accesories2;
+        private IEnumerable<Combination> accesories3;
+        private IEnumerable<Combination> accesories4;
+        private IEnumerable<Combination> accesories5;
+        private IEnumerable<Combination> accesories6;
+        private IEnumerable<Combination> accesories7;
+        private IEnumerable<Combination> accesories8;
+        private StyleRule currentStyleRule;
+
+        private bool ExecuteOutfitGenerator(IList<Garment> addedGarments, bool createRecords)
+        {
+            newGarments = null;
+            flavorCombinations.Clear();
+            outfits.Clear();
+
+            this.createRecords = createRecords;
+            if (addedGarments != null)
+            {
+                newGarments = new HashSet<Garment>();
+                foreach (Garment g in addedGarments)
+                    newGarments.Add(g);
+            }
+
+            lstGarments = (from cg in currentGarments
+                                          where
+                                          !cg.Tags.Silouhette.Layers.Contains(LayerCode.ACC1)
+                                          && !cg.Tags.Silouhette.Layers.Contains(LayerCode.ACC2)
+                                          && !cg.Tags.Silouhette.Layers.Contains(LayerCode.ACC3)
+                                          && !cg.Tags.Silouhette.Layers.Contains(LayerCode.ACC4)
+                                          && !cg.Tags.Silouhette.Layers.Contains(LayerCode.ACC5)
+                                          && !cg.Tags.Silouhette.Layers.Contains(LayerCode.ACC6)
+                                          && !cg.Tags.Silouhette.Layers.Contains(LayerCode.ACC7)
+                                          && !cg.Tags.Silouhette.Layers.Contains(LayerCode.ACC8)
+                                          select cg).ToList<Garment>();
+
+            logger.DebugFormat("Found {0} garments.", lstGarments.Count);
+
+            lstAccesories = (from cg in currentGarments
+                                            where
+                                            (cg.Tags.Silouhette.Layers.Contains(LayerCode.ACC1)
+                                            || cg.Tags.Silouhette.Layers.Contains(LayerCode.ACC2)
+                                            || cg.Tags.Silouhette.Layers.Contains(LayerCode.ACC3)
+                                            || cg.Tags.Silouhette.Layers.Contains(LayerCode.ACC4)
+                                            || cg.Tags.Silouhette.Layers.Contains(LayerCode.ACC5)
+                                            || cg.Tags.Silouhette.Layers.Contains(LayerCode.ACC6)
+                                            || cg.Tags.Silouhette.Layers.Contains(LayerCode.ACC7)
+                                            || cg.Tags.Silouhette.Layers.Contains(LayerCode.ACC8))
+                                            select cg).ToList<Garment>();
+
+            logger.DebugFormat("Found {0} accesories.", lstAccesories.Count);
+
+            if (lstGarments.Count == 0 || lstAccesories.Count == 0)
+                return false;
+
+            return ExecuteSet();
+        }
+
+        public bool ExecuteSet()
+        {
+            bool found = false;
+
+            IList<Garment> garmentsA = (from g in lstGarments
+                                           where g.Tags.Silouhette.Layers.Contains(LayerCode.A)
+                                           select g).ToList<Garment>();
+            IList<Garment> garmentsC = (from g in lstGarments
+                                           where g.Tags.Silouhette.Layers.Contains(LayerCode.C)
+                                           select g).ToList<Garment>();
+            IList<Garment> garmentsD = (from g in lstGarments
+                                           where g.Tags.Silouhette.Layers.Contains(LayerCode.D)
+                                           select g).ToList<Garment>();
+
+            IList<Garment> garmentsAii = (from g in lstGarments
+                                             where g.Tags.Silouhette.Layers.Contains(LayerCode.Aii)
+                                             select g).ToList<Garment>();
+
+            IList<Garment> garmentsAi = (from g in lstGarments
+                                            where g.Tags.Silouhette.Layers.Contains(LayerCode.Ai)
+                                            select g).ToList<Garment>();
+
+            IList<Garment> garmentsB = (from g in lstGarments where g.Tags.Silouhette.Layers.Contains(LayerCode.B) select g).ToList<Garment>();
+            IList<Garment> garmentsCD = (from g in lstGarments
+                                            where g.Tags.Silouhette.Layers.Contains(LayerCode.C) ||
+                                             g.Tags.Silouhette.Layers.Contains(LayerCode.D)
+                                         select g).ToList<Garment>();
+            IList<Garment> garmentsBCD = (from g in lstGarments
+                                             where g.Tags.Silouhette.Layers.Contains(LayerCode.C) ||
+                                              g.Tags.Silouhette.Layers.Contains(LayerCode.D) ||
+                                              g.Tags.Silouhette.Layers.Contains(LayerCode.B)
+                                          select g).ToList<Garment>();
+
+            //  A + B, A+C, A+D 
+            IEnumerable<Combination> comb = Combine(2, garmentsA, garmentsBCD, null, null, null);
+
+            // A+B+C, A+B+D, A+C+D
+            IEnumerable<Combination> combABC_D = Combine(3, garmentsA, garmentsB, garmentsCD, null, null);
+
+            // A+C+D
+            IEnumerable<Combination> combACD = Combine(3, garmentsA, garmentsC, garmentsD, null, null);
+
+            // Ai + Aii + B, Ai + Aii + C, Ai + Aii + D
+            IEnumerable<Combination> combAii = Combine(3, garmentsAi, garmentsAii, garmentsBCD, null, null);
+
+            // A+B+C+D
+            IEnumerable<Combination> combABCD = Combine(4, garmentsA, garmentsB, garmentsC, garmentsD, null);
+
+            // Ai + Aii + B + C, Ai + Aii + C + D
+            IEnumerable<Combination> combAiAiiBC = Combine(4, garmentsAi, garmentsAii, garmentsB, garmentsC, null);
+            IEnumerable<Combination> combAiAiiCD = Combine(4, garmentsAi, garmentsAii, garmentsC, garmentsD, null);
+
+            // Ai + Aii + B + C + D
+            IEnumerable<Combination> combAiAiiBCD = Combine(5, garmentsAi, garmentsAii, garmentsB, garmentsC, garmentsD);
+
+            // Find accesories
+            var linqAccesories1 = (from g in lstAccesories
+                                   where g.Tags.Silouhette.Layers.Contains(LayerCode.ACC1)
+                                   select g).ToList<Garment>();
+
+            var linqAccesories2 = (from g in lstAccesories
+                                   where g.Tags.Silouhette.Layers.Contains(LayerCode.ACC2)
+                                   select g).ToList<Garment>();
+
+            var linqAccesories3 = (from g in lstAccesories
+                                   where g.Tags.Silouhette.Layers.Contains(LayerCode.ACC3)
+                                   select g).ToList<Garment>();
+
+            var linqAccesories4 = (from g in lstAccesories
+                                   where g.Tags.Silouhette.Layers.Contains(LayerCode.ACC4)
+                                   select g).ToList<Garment>();
+
+            var linqAccesories5 = (from g in lstAccesories
+                                   where g.Tags.Silouhette.Layers.Contains(LayerCode.ACC5)
+                                   select g).ToList<Garment>();
+
+            var linqAccesories6 = (from g in lstAccesories
+                                   where g.Tags.Silouhette.Layers.Contains(LayerCode.ACC6)
+                                   select g).ToList<Garment>();
+
+            var linqAccesories7 = (from g in lstAccesories
+                                   where g.Tags.Silouhette.Layers.Contains(LayerCode.ACC7)
+                                   select g).ToList<Garment>();
+
+            var linqAccesories8 = (from g in lstAccesories
+                                   where g.Tags.Silouhette.Layers.Contains(LayerCode.ACC8)
+                                   select g).ToList<Garment>();
+
+            accesories1 = Combine(1, linqAccesories1, null, null, null, null);
+            accesories2 = Combine(2, linqAccesories1, linqAccesories2, null, null, null);
+            accesories3 = Combine(3, linqAccesories1, linqAccesories2, linqAccesories3, null, null);
+            accesories4 = Combine(4, linqAccesories1, linqAccesories2, linqAccesories3, linqAccesories4, null);
+            accesories5 = Combine(5, linqAccesories1, linqAccesories2, linqAccesories3, linqAccesories4, linqAccesories5);
+            accesories6 = Combine(6, linqAccesories1, linqAccesories2, linqAccesories3, linqAccesories4, linqAccesories5, linqAccesories6, null, null);
+            accesories7 = Combine(7, linqAccesories1, linqAccesories2, linqAccesories3, linqAccesories4, linqAccesories5, linqAccesories6, linqAccesories7, null);
+            accesories8 = Combine(8, linqAccesories1, linqAccesories2, linqAccesories3, linqAccesories4, linqAccesories5, linqAccesories6, linqAccesories7, linqAccesories8);
+
+            foreach (FashionFlavor fv in currentFlavors)
+            {
+                logger.DebugFormat("Started Flavor {0}.", fv.Name);
+
+                this.currentFlavor = fv;
+
+                var styleRule = from s in lstStyleRules
+                                where s.FashionFlavor.Id == fv.Id
+                                select s;
+
+                currentStyleRule = styleRule.First<StyleRule>();
+
+                for (int i = currentStyleRule.MinimumLayers; i <= currentStyleRule.MaximumLayers; i++)
+                {
+                    bool recordsFound = false;
+                    logger.DebugFormat("Started Layers {0}", i);
+                    switch (i)
+                    {
+                        case 2:
+
+                            recordsFound = ExcludeCombinations(currentStyleRule, comb);
+
+                            break;
+                        case 3:
+
+                            recordsFound = ExcludeCombinations(currentStyleRule, combABC_D);
+
+
+                            recordsFound = recordsFound || ExcludeCombinations(currentStyleRule, combACD);
+
+
+                            recordsFound = recordsFound || ExcludeCombinations(currentStyleRule, combAii);
+
+                            break;
+                        case 4:
+                            recordsFound = ExcludeCombinations(currentStyleRule, combABCD);
+
+                            recordsFound = recordsFound || ExcludeCombinations(currentStyleRule, combAiAiiBC);
+
+                            recordsFound = recordsFound || ExcludeCombinations(currentStyleRule, combAiAiiCD);
+
+                            break;
+                        case 5:
+
+                            recordsFound = ExcludeCombinations(currentStyleRule, combAiAiiBCD);
+
+                            break;
+
+                    }
+
+                    // No need to continue to check.
+                    if (!createRecords && recordsFound)
+                        return recordsFound;
+
+                    found = found || recordsFound;
+                }
+            }
+
+            return found;
+        }
+
+        public bool ProcessFoundCombinations(StyleRule sr)
+        {
+            bool found = false;
+            if (flavorCombinations.Count == 0)
+                return found;
+
+            var limitCombinations = (from fc in flavorCombinations orderby fc.EditorRating descending select fc).Take(5000);
+
+            if (lstAccesories.Count != 0)
+            {
+                logger.DebugFormat("Joinining {0} combinations with {1} accesories", flavorCombinations.Count, lstAccesories.Count);
+
+                if (createRecords)
+                    this.fileName = Guid.NewGuid().ToString() + ".txt";
+
+                foreach (int i in sr.AccessoriesAmount)
+                {
+                    switch (i)
+                    {
+                        case 1:
+                            // Only ACC1.
+                            this.IncludeAccesories(limitCombinations, accesories1, 1);
+                            break;
+                        case 2:
+                            // Only ACC1, ACC2.
+                            this.IncludeAccesories(limitCombinations, accesories2, 2);
+                            break;
+                        case 3:
+                            // Only ACC1, ACC2, ACC3.
+                            this.IncludeAccesories(limitCombinations, accesories3, 3);
+                            break;
+                        case 4:
+                            // Only ACC1, ACC2, ACC3, ACC4.
+                            this.IncludeAccesories(limitCombinations, accesories4, 4);
+                            break;
+                        case 5:
+                            // Only ACC1, ACC2, ACC3, ACC4, ACC5.
+                            this.IncludeAccesories(limitCombinations, accesories5, 5);
+                            this.IncludeAccesories(limitCombinations, accesories6, 6);
+                            this.IncludeAccesories(limitCombinations, accesories7, 7);
+                            this.IncludeAccesories(limitCombinations, accesories8, 8);
+                            break;
+                    }
+
+                    // Don't keep processing if we are not going to save them.
+                    if (!createRecords && this.outfits.Count > 0)
+                        return true;
+
+                    logger.DebugFormat("Found {0} outfits for {1} accesories.", outfits.Count, i);
+
+                    // Save each combination while processing.
+                    if (outfits.Count > 0)
+                    {
+                        found = true;
+                        if (createRecords)
+                        {
+                            logger.DebugFormat("Import to database with file: {0}", fileName);
+                            SaveToFile();
+                            closetRepository.ProcessClosetFile(Path.Combine(this.LocalDatabasePath, fileName));
+
+                            logger.DebugFormat("Update database with file: {0}", fileName);
+                            closetRepository.CompleteClosetCreation(this.Closet.Id);
+                            logger.DebugFormat("End update database with file: {0}", fileName);
+
+                            logger.DebugFormat("Adding outfit updaters");
+                            // TBD: Adding relations with current Outfit Updaters.
+                            logger.DebugFormat("Finish adding outfit updaters");
+                        }
+                    }
+
+                    outfits.Clear();
+                }
+            }
+
+            flavorCombinations.Clear();
+
+            return found;
+        }
+        #endregion
+
+        #region Save To File
+
+        public const int lineSize = 150;
+        public const int maxLineSize = 190;
+        public const int maxRecords = 200000;
+
+        public void SaveToFile()
+        {
+            int i = 0;
+
+            StringBuilder sb = new StringBuilder(lineSize * 200000, maxLineSize * maxRecords);
+
+            Dictionary<LayerCode, int> dict = new Dictionary<LayerCode, int>();
+            dict.Add(LayerCode.A, 0);
+            dict.Add(LayerCode.Ai, 0);
+            dict.Add(LayerCode.Aii, 1);
+            dict.Add(LayerCode.B, 2);
+            dict.Add(LayerCode.C, 3);
+            dict.Add(LayerCode.D, 4);
+            dict.Add(LayerCode.ACC1, 5);
+            dict.Add(LayerCode.ACC2, 6);
+            dict.Add(LayerCode.ACC3, 7);
+            dict.Add(LayerCode.ACC4, 8);
+            dict.Add(LayerCode.ACC5, 9);
+            dict.Add(LayerCode.ACC6, 10);
+            dict.Add(LayerCode.ACC7, 11);
+            dict.Add(LayerCode.ACC8, 12);
+
+            foreach (PreOutfit po in this.outfits)
+            {
+
+                Combination pc = po.Combination;
+
+                StringBuilder lb = new StringBuilder(lineSize,maxLineSize);
+
+                // Add Closet & Flavor
+                lb.Append(this.Closet.Id);
+                lb.Append(",");
+                lb.Append(pc.FashionFlavor.Id);
+
+                int used = 2;
+
+                // Let's setup in the correct order to avoid duplicates.
+                Garment[] arrItems = new Garment[13];
+                foreach (Garment g in po.ToList())
+                {
+                    // Always use first silouhette to position
+                    int pos = dict[g.Tags.Silouhette.Layers[0]];
+                    arrItems[pos] = g;
+                }
+
+                foreach (Garment g in arrItems)
+                {
+                    if (g != null)
+                    {
+                        lb.Append(",");
+                        lb.Append(g.Id);
+                        lb.Append(",");
+                        lb.Append(g.PreGarment.Id);
+                        used++;
+                    }
+                    else
+                    {
+                        lb.Append(",");
+                        lb.Append(@"0");
+                        lb.Append(",");
+                        lb.Append(@"0");
+                    }
+                }
+
+                lb.Append(",");
+                lb.Append(po.Seasons.ToString());
+                lb.Append(",");
+                lb.Append(po.EventTypes.ToString());
+                lb.Append(",");
+                lb.Append(pc.EditorRating);
+
+                sb.AppendLine(lb.ToString());
+
+                i++;
+                if (i == 200000)
+                {
+                    System.IO.File.AppendAllText(Path.Combine(this.SharePath,fileName), sb.ToString());
+                    sb = null;
+
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
+
+                    sb = new StringBuilder(lineSize * maxRecords, maxLineSize * maxRecords);
+                    i = 0;
+                }
+            }
+
+            if (i > 0)
+            {
+                System.IO.File.AppendAllText(Path.Combine(this.SharePath, fileName), sb.ToString());
+                sb = null;
+
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+            }
+        }
+
+
+        #endregion
+
+        #region Exclude Combinations
+
+        private const int MAX_ACCESORIES_PER_COMBINATION = 20;
+        private const int MAX_COMBINATIONS_PER_SET = 5000;
+
+        private void IncludeAccesories(IEnumerable<Combination> currentCombinations, IEnumerable<Combination> accesories, int amount)
+        {
+            HashSet<int> seasons = new HashSet<int>();
+            HashSet<int> eventTypes = new HashSet<int>();
+
+            foreach (Combination comb in currentCombinations)
+            {
+                // Make sure there will be only 10 garments per outfit.
+                int combinationAmount = 2;
+                if (comb.GarmentC != null)
+                    combinationAmount++;
+                if (comb.GarmentD != null)
+                    combinationAmount++;
+                if (comb.GarmentE != null)
+                    combinationAmount++;
+
+                if (combinationAmount + amount > 10)
+                    continue;
+
+                int i = 0;
+
+                foreach (Combination acc in accesories)
+                {
+                    // Exclude combination if does not contains an added garment.
+                    if (newGarments != null)
+                    {
+                        if (!newGarments.Contains(comb.GarmentA) && !newGarments.Contains(comb.GarmentB) && 
+                            !newGarments.Contains(comb.GarmentC) && !newGarments.Contains(comb.GarmentD) && 
+                            !newGarments.Contains(comb.GarmentE) && !newGarments.Contains(acc.GarmentA) &&
+                            !newGarments.Contains(acc.GarmentB) && !newGarments.Contains(acc.GarmentC) &&
+                            !newGarments.Contains(acc.GarmentD) && !newGarments.Contains(acc.GarmentE) &&
+                            !newGarments.Contains(acc.GarmentF) && !newGarments.Contains(acc.GarmentG) &&
+                            !newGarments.Contains(acc.GarmentH)
+                            )
+                            continue;
+                    }
+
+                    PreOutfit outfit = new PreOutfit();
+                    outfit.Combination = comb;
+                    outfit.Accesory1 = acc.GarmentA;
+                    outfit.Accesory2 = acc.GarmentB;
+                    outfit.Accesory3 = acc.GarmentC;
+                    outfit.Accesory4 = acc.GarmentD;
+                    outfit.Accesory5 = acc.GarmentE;
+                    outfit.Accesory6 = acc.GarmentF;
+                    outfit.Accesory7 = acc.GarmentG;
+                    outfit.Accesory8 = acc.GarmentH;
+
+                    if (!VerifyAndSetSeasonsAndEventTypes(seasons, eventTypes, outfit))
+                        continue;
+
+                    bool colorMatched = true;
+
+                    HashSet<ColorFamily> colorFamiliesHash = new HashSet<ColorFamily>();
+                    if (comb.GarmentA != null) colorFamiliesHash.Add(comb.GarmentA.Tags.Colors[0].Family);
+                    if (comb.GarmentB != null) colorFamiliesHash.Add(comb.GarmentB.Tags.Colors[0].Family);
+                    if (comb.GarmentC != null) colorFamiliesHash.Add(comb.GarmentC.Tags.Colors[0].Family);
+                    if (comb.GarmentD != null) colorFamiliesHash.Add(comb.GarmentD.Tags.Colors[0].Family);
+                    if (comb.GarmentE != null) colorFamiliesHash.Add(comb.GarmentE.Tags.Colors[0].Family);
+                    if (acc.GarmentA != null) colorFamiliesHash.Add(acc.GarmentA.Tags.Colors[0].Family);
+
+                    IList<ColorFamily> colorFamilies = colorFamiliesHash.ToList<ColorFamily>();
+
+                    if (currentStyleRule.ColorBlending.MonotoneColor)
+                        colorMatched = (colorFamilies.Count == 1);
+
+                    if (!colorMatched && currentStyleRule.ColorBlending.AnalogousColor)
+                    {
+                        if (colorFamilies.Count == 2)
+                            colorMatched = (colorFamilies[0].AnalogousFamily == colorFamilies[1] || colorFamilies[0].AnalogousFamily2 == colorFamilies[1]);
+                    }
+
+                    if (!colorMatched && currentStyleRule.ColorBlending.ComplimentaryColor)
+                        if (colorFamilies.Count == 2)
+                            colorMatched = (colorFamilies[0].ComplimentaryFamily == colorFamilies[1]);
+
+                    if (!colorMatched && currentStyleRule.ColorBlending.NeutralColor)
+                    {
+                        colorMatched = true;
+                        foreach (ColorFamily cf in colorFamilies)
+                            if (!cf.IsNeutral)
+                                colorMatched = false;
+                    }
+
+                    if (!colorMatched && currentStyleRule.ColorBlending.NeutralPrimaryColor)
+                    {
+                        colorMatched = true;
+                        foreach (ColorFamily cf in colorFamilies)
+                            if (!cf.IsNeutral && !cf.IsPrimary)
+                                colorMatched = false;
+                    }
+
+                    if (!colorMatched && currentStyleRule.ColorBlending.NeutralSecondaryColor)
+                    {
+                        colorMatched = true;
+                        foreach (ColorFamily cf in colorFamilies)
+                            if (!cf.IsNeutral && !cf.IsSecondary)
+                                colorMatched = false;
+                    }
+
+                    if (!colorMatched)
+                        continue;
+
+                    outfit.Seasons = seasons.Sum();
+                    outfit.EventTypes = eventTypes.Sum();
+                    outfits.Add(outfit);
+
+                    // Limit to 20 accesories per combination maximum.
+                    if (i >= MAX_ACCESORIES_PER_COMBINATION)
+                        break;
+
+                    i++;
+                }
+            }
+        }
+
+        private bool VerifyAndSetSeasonsAndEventTypes(HashSet<int> seasons, HashSet<int> eventTypes, PreOutfit of)
+        {
+            // Load first data available
+            seasons.Clear();
+            seasons.Add(of.Combination.GarmentA.SeasonCode & (int)Season.Fall);
+            seasons.Add(of.Combination.GarmentA.SeasonCode & (int)Season.Spring);
+            seasons.Add(of.Combination.GarmentA.SeasonCode & (int)Season.Summer);
+            seasons.Add(of.Combination.GarmentA.SeasonCode & (int)Season.Winter);
+            seasons.Remove(0);
+
+            eventTypes.Clear();
+            eventTypes.Add(of.Combination.GarmentA.EventCode & 1);
+            eventTypes.Add(of.Combination.GarmentA.EventCode & 2);
+            eventTypes.Add(of.Combination.GarmentA.EventCode & 4);
+            eventTypes.Add(of.Combination.GarmentA.EventCode & 8);
+            eventTypes.Add(of.Combination.GarmentA.EventCode & 16);
+            eventTypes.Remove(0);
+
+            seasons.UnionWith(GetSeasons(of.Combination.GarmentB));
+            seasons.UnionWith(GetSeasons(of.Combination.GarmentC));
+            seasons.UnionWith(GetSeasons(of.Combination.GarmentD));
+            seasons.UnionWith(GetSeasons(of.Combination.GarmentE));
+            seasons.UnionWith(GetSeasons(of.Accesory1));
+            seasons.UnionWith(GetSeasons(of.Accesory2));
+            seasons.UnionWith(GetSeasons(of.Accesory3));
+            seasons.UnionWith(GetSeasons(of.Accesory4));
+            seasons.UnionWith(GetSeasons(of.Accesory5));
+            seasons.UnionWith(GetSeasons(of.Accesory6));
+            seasons.UnionWith(GetSeasons(of.Accesory7));
+            seasons.UnionWith(GetSeasons(of.Accesory8));
+
+            eventTypes.UnionWith(GetEventTypes(of.Combination.GarmentB));
+            eventTypes.UnionWith(GetEventTypes(of.Combination.GarmentC));
+            eventTypes.UnionWith(GetEventTypes(of.Combination.GarmentD));
+            eventTypes.UnionWith(GetEventTypes(of.Combination.GarmentE));
+            eventTypes.UnionWith(GetEventTypes(of.Accesory1));
+            eventTypes.UnionWith(GetEventTypes(of.Accesory2));
+            eventTypes.UnionWith(GetEventTypes(of.Accesory3));
+            eventTypes.UnionWith(GetEventTypes(of.Accesory4));
+            eventTypes.UnionWith(GetEventTypes(of.Accesory5));
+            eventTypes.UnionWith(GetEventTypes(of.Accesory6));
+            eventTypes.UnionWith(GetEventTypes(of.Accesory7));
+            eventTypes.UnionWith(GetEventTypes(of.Accesory8));
+
+            return (eventTypes.Count > 0 && seasons.Count > 0);
+        }
+
+        private HashSet<int> GetSeasons(Garment g)
+        {
+            HashSet<int> lst = new HashSet<int>();
+            if (g != null)
+            {
+                lst.Add(g.SeasonCode & (int)Season.Fall);
+                lst.Add(g.SeasonCode & (int)Season.Spring);
+                lst.Add(g.SeasonCode & (int)Season.Summer);
+                lst.Add(g.SeasonCode & (int)Season.Winter);
+                lst.Remove(0);
+            }
+            return lst;
+        }
+
+        private HashSet<int> GetEventTypes(Garment g)
+        {
+            HashSet<int> lst = new HashSet<int>();
+            if (g != null)
+            {
+                lst.Add(g.EventCode & 1);
+                lst.Add(g.EventCode & 2);
+                lst.Add(g.EventCode & 4);
+                lst.Add(g.EventCode & 8);
+                lst.Add(g.EventCode & 16);
+                lst.Remove(0);
+            }
+            return lst;
+        }
+
+        public bool ExcludeCombinations(StyleRule sr, IEnumerable<Combination> lst)
+        {
+            IList<Combination> lstFound = new List<Combination>();
+
+            // Exclude By Rules
+            foreach (Combination cb in lst)
+            {
+                bool colorMatched = true;
+
+                HashSet<ColorFamily> colorFamiliesHash = new HashSet<ColorFamily>();
+                if (cb.GarmentA != null) colorFamiliesHash.Add(cb.GarmentA.Tags.Colors[0].Family);
+                if (cb.GarmentB != null) colorFamiliesHash.Add(cb.GarmentB.Tags.Colors[0].Family);
+                if (cb.GarmentC != null) colorFamiliesHash.Add(cb.GarmentC.Tags.Colors[0].Family);
+                if (cb.GarmentD != null) colorFamiliesHash.Add(cb.GarmentD.Tags.Colors[0].Family);
+                if (cb.GarmentE != null) colorFamiliesHash.Add(cb.GarmentE.Tags.Colors[0].Family);
+
+                IList<ColorFamily> colorFamilies = colorFamiliesHash.ToList<ColorFamily>();
+
+                if (sr.ColorBlending.MonotoneColor)
+                    colorMatched = (colorFamilies.Count == 1);
+
+                if (!colorMatched && sr.ColorBlending.AnalogousColor)
+                {
+                    if (colorFamilies.Count == 2)
+                        colorMatched = (colorFamilies[0].AnalogousFamily == colorFamilies[1] || colorFamilies[0].AnalogousFamily2 == colorFamilies[1]);
+                }
+
+                if (!colorMatched && sr.ColorBlending.ComplimentaryColor)
+                    if (colorFamilies.Count == 2)
+                        colorMatched = (colorFamilies[0].ComplimentaryFamily == colorFamilies[1]);
+
+                if (!colorMatched && sr.ColorBlending.NeutralColor)
+                {
+                    colorMatched = true;
+                    foreach (ColorFamily cf in colorFamilies)
+                        if (!cf.IsNeutral)
+                            colorMatched = false;
+                }
+
+                if (!colorMatched && sr.ColorBlending.NeutralPrimaryColor)
+                {
+                    colorMatched = true;
+                    foreach (ColorFamily cf in colorFamilies)
+                        if (!cf.IsNeutral && !cf.IsPrimary)
+                            colorMatched = false;
+                }
+
+                if (!colorMatched && sr.ColorBlending.NeutralSecondaryColor)
+                {
+                    colorMatched = true;
+                    foreach (ColorFamily cf in colorFamilies)
+                        if (!cf.IsNeutral && !cf.IsSecondary)
+                            colorMatched = false;
+                }
+
+                if (!colorMatched)
+                    continue;
+
+                HashSet<PatternType> pt = new HashSet<PatternType>();
+                if (cb.GarmentA != null) pt.Add(cb.GarmentA.Tags.Pattern.Type);
+                if (cb.GarmentB != null) pt.Add(cb.GarmentB.Tags.Pattern.Type);
+                if (cb.GarmentC != null) pt.Add(cb.GarmentC.Tags.Pattern.Type);
+                if (cb.GarmentD != null) pt.Add(cb.GarmentD.Tags.Pattern.Type);
+                if (cb.GarmentE != null) pt.Add(cb.GarmentE.Tags.Pattern.Type);
+
+                bool matched = false;
+                foreach (PatternRule pr in sr.Patterns)
+                {
+                    if (pt.Count == 1 && pr.FromItem == pr.ToItem && pt.Contains(pr.FromItem))
+                        matched = true;
+                    else if (pt.Count == 2 && pr.FromItem != pr.ToItem && pt.Contains(pr.FromItem) && pt.Contains(pr.ToItem))
+                        matched = true;
+                }
+
+                if (!matched)
+                    continue;
+
+                HashSet<StructureType> st = new HashSet<StructureType>();
+                if (cb.GarmentA != null) st.Add(cb.GarmentA.Tags.Silouhette.Structure.Type);
+                if (cb.GarmentB != null) st.Add(cb.GarmentB.Tags.Silouhette.Structure.Type);
+                if (cb.GarmentC != null) st.Add(cb.GarmentC.Tags.Silouhette.Structure.Type);
+                if (cb.GarmentD != null) st.Add(cb.GarmentD.Tags.Silouhette.Structure.Type);
+                if (cb.GarmentE != null) st.Add(cb.GarmentE.Tags.Silouhette.Structure.Type);
+
+                matched = false;
+                foreach (StructureRule pr in sr.Structures)
+                {
+                    if (st.Count == 1 && pr.FromItem == pr.ToItem && st.Contains(pr.FromItem))
+                        matched = true;
+                    else if (st.Count == 2 && pr.FromItem != pr.ToItem && st.Contains(pr.FromItem) && st.Contains(pr.ToItem))
+                        matched = true;
+                }
+
+                if (!matched)
+                    continue;
+
+                if (cb.GarmentA.Tags.Silouhette.Layers.Contains(LayerCode.Ai))
+                {
+                    HashSet<ShapeType> sh = new HashSet<ShapeType>();
+                    if (cb.GarmentA != null) sh.Add(cb.GarmentA.Tags.Silouhette.Shape.Type);
+                    if (cb.GarmentB != null) sh.Add(cb.GarmentB.Tags.Silouhette.Shape.Type);
+                    if (cb.GarmentC != null) sh.Add(cb.GarmentC.Tags.Silouhette.Shape.Type);
+                    if (cb.GarmentD != null) sh.Add(cb.GarmentD.Tags.Silouhette.Shape.Type);
+                    if (cb.GarmentE != null) sh.Add(cb.GarmentE.Tags.Silouhette.Shape.Type);
+
+                    matched = false;
+                    foreach (ShapeRule shapeRule in sr.Shapes)
+                    {
+                        if (sh.Count == 1 && shapeRule.FromItem == shapeRule.ToItem && sh.Contains(shapeRule.FromItem))
+                            matched = true;
+                        else if (sh.Count == 2 && shapeRule.FromItem != shapeRule.ToItem && sh.Contains(shapeRule.FromItem) && sh.Contains(shapeRule.ToItem))
+                            matched = true;
+                    }
+
+                    if (!matched)
+                        continue;
+                }
+
+                HashSet<Fabric> fabrics = new HashSet<Fabric>();
+                if (cb.GarmentA != null) fabrics.Add(cb.GarmentA.Tags.Fabric);
+                if (cb.GarmentB != null) fabrics.Add(cb.GarmentB.Tags.Fabric);
+                if (cb.GarmentC != null) fabrics.Add(cb.GarmentC.Tags.Fabric);
+                if (cb.GarmentD != null) fabrics.Add(cb.GarmentD.Tags.Fabric);
+                if (cb.GarmentE != null) fabrics.Add(cb.GarmentE.Tags.Fabric);
+
+                HashSet<Color> colors = new HashSet<Color>();
+                if (cb.GarmentA != null) colors.Add(cb.GarmentA.Tags.Colors[0]);
+                if (cb.GarmentB != null) colors.Add(cb.GarmentB.Tags.Colors[0]);
+                if (cb.GarmentC != null) colors.Add(cb.GarmentC.Tags.Colors[0]);
+                if (cb.GarmentD != null) colors.Add(cb.GarmentD.Tags.Colors[0]);
+                if (cb.GarmentE != null) colors.Add(cb.GarmentE.Tags.Colors[0]);
+
+                bool shines = false;
+                bool isColorful = false;
+                foreach (Color c in colors)
+                {
+                    if (c.Shines)
+                        shines = true;
+
+                    if (c.IsColorful)
+                        isColorful = true;
+                }
+
+                foreach (Fabric f in fabrics)
+                    if (f.Shines)
+                        shines = true;
+
+                int points = 0;
+                if (pt.Count > 1)
+                    points += 1;
+                if (fabrics.Count > 1)
+                    points += 1;
+                if (shines)
+                    points += 1;
+                if (isColorful)
+                    points += 1;
+
+                cb.EditorRating = points;
+
+                cb.FashionFlavor = sr.FashionFlavor;
+                lstFound.Add(cb);
+            }
+
+            flavorCombinations.UnionWith(lstFound);
+
+            return ProcessFoundCombinations(sr);
+        }
+
+        #endregion
+
+        #region OutfitUpdatersByPreCombination
+        public IList<OutfitUpdaterByPreCombination> GetOutfitUpdatersByPreCombinations(IEnumerable<OutfitUpdater> outfitUpdaters, IEnumerable<PreCombination> lst)
+        {
+            lstStyleRules = styleRuleRepository.GetAll();
+            HashSet<OutfitUpdaterByPreCombination> result = new HashSet<OutfitUpdaterByPreCombination>();
+
+            // Exclude By Rules
+            foreach (PreCombination pcb in lst)
+            {
+                var styleRule = from s in lstStyleRules
+                                where s.FashionFlavor.Id == pcb.FashionFlavor.Id
+                                select s;
+
+                StyleRule sr = styleRule.First<StyleRule>();
+
+                foreach (OutfitUpdater outfitUpdater in outfitUpdaters)
+                {
+                    bool colorMatched = true;
+
+                    HashSet<ColorFamily> colorFamiliesHash = new HashSet<ColorFamily>();
+                    if (pcb.Garment1 != null && pcb.Garment1.Id != 0 && !IsAccesory(pcb.Garment1)) colorFamiliesHash.Add(pcb.Garment1.ColorFamily);
+                    if (pcb.Garment2 != null && pcb.Garment2.Id != 0 && !IsAccesory(pcb.Garment2)) colorFamiliesHash.Add(pcb.Garment2.ColorFamily);
+                    if (pcb.Garment3 != null && pcb.Garment3.Id != 0 && !IsAccesory(pcb.Garment3)) colorFamiliesHash.Add(pcb.Garment3.ColorFamily);
+                    if (pcb.Garment4 != null && pcb.Garment4.Id != 0 && !IsAccesory(pcb.Garment4)) colorFamiliesHash.Add(pcb.Garment4.ColorFamily);
+                    if (pcb.Garment5 != null && pcb.Garment5.Id != 0 && !IsAccesory(pcb.Garment5)) colorFamiliesHash.Add(pcb.Garment5.ColorFamily);
+                    colorFamiliesHash.Add(outfitUpdater.ColorFamily);
+
+                    IList<ColorFamily> colorFamilies = colorFamiliesHash.ToList<ColorFamily>();
+
+                    if (sr.ColorBlending.MonotoneColor)
+                        colorMatched = (colorFamilies.Count == 1);
+
+                    if (!colorMatched && sr.ColorBlending.AnalogousColor)
+                    {
+                        if (colorFamilies.Count == 2)
+                            colorMatched = (colorFamilies[0].AnalogousFamily == colorFamilies[1] ||
+                                            colorFamilies[0].AnalogousFamily2 == colorFamilies[1]);
+                    }
+
+                    if (!colorMatched && sr.ColorBlending.ComplimentaryColor)
+                        if (colorFamilies.Count == 2)
+                            colorMatched = (colorFamilies[0].ComplimentaryFamily == colorFamilies[1]);
+
+                    if (!colorMatched && sr.ColorBlending.NeutralColor)
+                    {
+                        colorMatched = true;
+                        foreach (ColorFamily cf in colorFamilies)
+                            if (!cf.IsNeutral)
+                                colorMatched = false;
+                    }
+
+                    if (!colorMatched && sr.ColorBlending.NeutralPrimaryColor)
+                    {
+                        colorMatched = true;
+                        foreach (ColorFamily cf in colorFamilies)
+                            if (!cf.IsNeutral && !cf.IsPrimary)
+                                colorMatched = false;
+                    }
+
+                    if (!colorMatched && sr.ColorBlending.NeutralSecondaryColor)
+                    {
+                        colorMatched = true;
+                        foreach (ColorFamily cf in colorFamilies)
+                            if (!cf.IsNeutral && !cf.IsSecondary)
+                                colorMatched = false;
+                    }
+
+                    if (!colorMatched)
+                        continue;
+
+                    HashSet<PatternType> pt = new HashSet<PatternType>();
+                    if (pcb.Garment1 != null && pcb.Garment1.Id != 0 && !IsAccesory(pcb.Garment1)) pt.Add(pcb.Garment1.PatternType);
+                    if (pcb.Garment2 != null && pcb.Garment2.Id != 0 && !IsAccesory(pcb.Garment2)) pt.Add(pcb.Garment2.PatternType);
+                    if (pcb.Garment3 != null && pcb.Garment3.Id != 0 && !IsAccesory(pcb.Garment3)) pt.Add(pcb.Garment3.PatternType);
+                    if (pcb.Garment4 != null && pcb.Garment4.Id != 0 && !IsAccesory(pcb.Garment4)) pt.Add(pcb.Garment4.PatternType);
+                    if (pcb.Garment5 != null && pcb.Garment5.Id != 0 && !IsAccesory(pcb.Garment5)) pt.Add(pcb.Garment5.PatternType);
+                    pt.Add(outfitUpdater.Pattern.Type);
+
+                    bool matched = false;
+                    foreach (PatternRule pr in sr.Patterns)
+                    {
+                        if (pt.Count == 1 && pr.FromItem == pr.ToItem && pt.Contains(pr.FromItem))
+                            matched = true;
+                        else if (pt.Count == 2 && pr.FromItem != pr.ToItem && pt.Contains(pr.FromItem) &&
+                                 pt.Contains(pr.ToItem))
+                            matched = true;
+                    }
+
+                    if (!matched)
+                        continue;
+
+                    HashSet<StructureType> st = new HashSet<StructureType>();
+                    if (pcb.Garment1 != null && pcb.Garment1.Id != 0 && !IsAccesory(pcb.Garment1)) st.Add(pcb.Garment1.Silouhette.Structure.Type);
+                    if (pcb.Garment2 != null && pcb.Garment2.Id != 0 && !IsAccesory(pcb.Garment2)) st.Add(pcb.Garment2.Silouhette.Structure.Type);
+                    if (pcb.Garment3 != null && pcb.Garment3.Id != 0 && !IsAccesory(pcb.Garment3)) st.Add(pcb.Garment3.Silouhette.Structure.Type);
+                    if (pcb.Garment4 != null && pcb.Garment4.Id != 0 && !IsAccesory(pcb.Garment4)) st.Add(pcb.Garment4.Silouhette.Structure.Type);
+                    if (pcb.Garment5 != null && pcb.Garment5.Id != 0 && !IsAccesory(pcb.Garment5)) st.Add(pcb.Garment5.Silouhette.Structure.Type);
+                    //st.Add(outfitUpdater.Silouhette.Structure.Type);
+
+                    matched = false;
+                    foreach (StructureRule pr in sr.Structures)
+                    {
+                        if (st.Count == 1 && pr.FromItem == pr.ToItem && st.Contains(pr.FromItem))
+                            matched = true;
+                        else if (st.Count == 2 && pr.FromItem != pr.ToItem && st.Contains(pr.FromItem) &&
+                                 st.Contains(pr.ToItem))
+                            matched = true;
+                    }
+
+                    if (!matched)
+                        continue;
+
+                    if (pcb.Garment1.Silouhette.Layers.Contains(LayerCode.Ai))
+                    {
+                        HashSet<ShapeType> sh = new HashSet<ShapeType>();
+                        if (pcb.Garment1 != null && pcb.Garment1.Id != 0 && !IsAccesory(pcb.Garment1)) sh.Add(pcb.Garment1.Silouhette.Shape.Type);
+                        if (pcb.Garment2 != null && pcb.Garment2.Id != 0 && !IsAccesory(pcb.Garment2)) sh.Add(pcb.Garment2.Silouhette.Shape.Type);
+                        if (pcb.Garment3 != null && pcb.Garment3.Id != 0 && !IsAccesory(pcb.Garment3)) sh.Add(pcb.Garment3.Silouhette.Shape.Type);
+                        if (pcb.Garment4 != null && pcb.Garment4.Id != 0 && !IsAccesory(pcb.Garment4)) sh.Add(pcb.Garment4.Silouhette.Shape.Type);
+                        if (pcb.Garment5 != null && pcb.Garment5.Id != 0 && !IsAccesory(pcb.Garment5)) sh.Add(pcb.Garment5.Silouhette.Shape.Type);
+                        //sh.Add(outfitUpdater.Silouhette.Shape.Type);
+
+                        matched = false;
+                        foreach (ShapeRule pr in sr.Shapes)
+                        {
+                            if (pt.Count == 1 && pr.FromItem == pr.ToItem && sh.Contains(pr.FromItem))
+                                matched = true;
+                            else if (pt.Count == 2 && pr.FromItem != pr.ToItem && sh.Contains(pr.FromItem) &&
+                                     sh.Contains(pr.ToItem))
+                                matched = true;
+                        }
+
+                        if (!matched)
+                            continue;
+                    }
+
+                    result.Add(new OutfitUpdaterByPreCombination(outfitUpdater, pcb));
+                }
+            }
+
+            return new List<OutfitUpdaterByPreCombination>(result);
+        }
+
+        private bool IsAccesory(PreGarment pg)
+        {
+            return (pg.Silouhette.Layers.Contains(LayerCode.ACC1) || pg.Silouhette.Layers.Contains(LayerCode.ACC2) ||
+                pg.Silouhette.Layers.Contains(LayerCode.ACC3) || pg.Silouhette.Layers.Contains(LayerCode.ACC4) ||
+                pg.Silouhette.Layers.Contains(LayerCode.ACC5) || pg.Silouhette.Layers.Contains(LayerCode.ACC6) ||
+                pg.Silouhette.Layers.Contains(LayerCode.ACC7) || pg.Silouhette.Layers.Contains(LayerCode.ACC8));
+        }
+
+        public string SaveOutfitUpdatersByPreCombinationsToFile(IList<OutfitUpdaterByPreCombination> outfitUpdaterByPreCombinations)
+        {
+            string filename = Guid.NewGuid().ToString() + ".txt";
+
+            int i = 0;
+
+            StringBuilder sb = new StringBuilder(lineSize * 200000, maxLineSize * maxRecords);
+
+            foreach (OutfitUpdaterByPreCombination item in outfitUpdaterByPreCombinations)
+            {
+                StringBuilder lb = new StringBuilder(lineSize, maxLineSize);
+
+                // Add Closet & Flavor
+                lb.Append(item.OutfitUpdater.Id);
+                lb.Append(",");
+                lb.Append(item.PreCombination.Id);
+                
+                sb.AppendLine(lb.ToString());
+
+                i++;
+                if (i == 200000)
+                {
+                    System.IO.File.AppendAllText(Path.Combine(this.SharePath, filename), sb.ToString());
+                    sb = null;
+
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
+
+                    sb = new StringBuilder(lineSize * maxRecords, maxLineSize * maxRecords);
+                    i = 0;
+                }
+            }
+
+            if (i > 0)
+            {
+                System.IO.File.AppendAllText(Path.Combine(this.SharePath, filename), sb.ToString());
+                sb = null;
+
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+            }
+
+            return LocalDatabasePath + @"\" + filename;
+        }
+
+        #endregion
+
+        #region Combine Cartesian Method
+
+        public IEnumerable<Combination> Combine(int minAmount, IEnumerable<Garment> garmentListFor1, IEnumerable<Garment> garmentListFor2, IEnumerable<Garment> garmentListFor3, IEnumerable<Garment> garmentListFor4, IEnumerable<Garment> garmentListFor5)
+        {
+            return Combine(minAmount, garmentListFor1, garmentListFor2, garmentListFor3, garmentListFor4, garmentListFor5, null, null, null);
+        }
+
+        public IEnumerable<Combination> Combine(int minAmount, IEnumerable<Garment> garmentListFor1, IEnumerable<Garment> garmentListFor2, IEnumerable<Garment> garmentListFor3, IEnumerable<Garment> garmentListFor4, IEnumerable<Garment> garmentListFor5, IEnumerable<Garment> garmentListFor6, IEnumerable<Garment> garmentListFor7, IEnumerable<Garment> garmentListFor8)
+        {
+            foreach (Garment ga in garmentListFor1)
+            {
+                if (garmentListFor2 == null && minAmount == 1)
+                {
+                    yield return new Combination { GarmentA = ga };
+                    continue;
+                }
+
+                foreach (Garment gb in garmentListFor2)
+                {
+                    if (garmentListFor3 == null && minAmount == 2)
+                    {
+                        yield return new Combination { GarmentA = ga, GarmentB = gb };
+                        continue;
+                    }
+
+                    foreach (Garment gc in garmentListFor3)
+                    {
+                        if (garmentListFor4 == null && minAmount == 3)
+                        {
+                            yield return new Combination { GarmentA = ga, GarmentB = gb, GarmentC = gc };
+                            continue;
+                        }
+
+                        foreach (Garment gd in garmentListFor4)
+                        {
+                            if (garmentListFor5 == null && minAmount == 4)
+                            {
+                                yield return new Combination { GarmentA = ga, GarmentB = gb, GarmentC = gc, GarmentD = gd };
+                                continue;
+                            }
+
+                            foreach (Garment ge in garmentListFor5)
+                            {
+                                if (garmentListFor6 == null && minAmount == 5)
+                                {
+                                    yield return new Combination { GarmentA = ga, GarmentB = gb, GarmentC = gc, GarmentD = gd, GarmentE = ge };
+                                    continue;
+                                }
+
+                                foreach (Garment gf in garmentListFor6)
+                                {
+                                    if (garmentListFor7 == null && minAmount == 6)
+                                    {
+                                        yield return new Combination { GarmentA = ga, GarmentB = gb, GarmentC = gc, GarmentD = gd, GarmentE = ge, GarmentF = gf };
+                                        continue;
+                                    }
+
+                                    foreach (Garment gg in garmentListFor7)
+                                    {
+                                        if (garmentListFor8 == null && minAmount == 7)
+                                        {
+                                            yield return new Combination { GarmentA = ga, GarmentB = gb, GarmentC = gc, GarmentD = gd, GarmentE = ge, GarmentF = gf, GarmentG = gg };
+                                            continue;
+                                        }
+
+                                        foreach (Garment gh in garmentListFor8)
+                                        {
+                                            yield return new Combination { GarmentA = ga, GarmentB = gb, GarmentC = gc, GarmentD = gd, GarmentE = ge, GarmentF = gf, GarmentG = gg, GarmentH = gh };
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #endregion
+    }
+}

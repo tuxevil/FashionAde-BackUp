@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/nybble/!svn/ver/4907/FashionAde/trunk/app/FashionAde.Web.Controllers/MVCInteraction
+END
+SilouhetteSelection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/nybble/!svn/ver/4749/FashionAde/trunk/app/FashionAde.Web.Controllers/MVCInteraction/SilouhetteSelection.cs
+END
+OutfitResume.cs
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/nybble/!svn/ver/4870/FashionAde/trunk/app/FashionAde.Web.Controllers/MVCInteraction/OutfitResume.cs
+END
+BetaInvitation.cs
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/nybble/!svn/ver/4891/FashionAde/trunk/app/FashionAde.Web.Controllers/MVCInteraction/BetaInvitation.cs
+END
+HomeRegisteredUserInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/nybble/!svn/ver/4490/FashionAde/trunk/app/FashionAde.Web.Controllers/MVCInteraction/HomeRegisteredUserInfo.cs
+END
+WebGarmentDetails.cs
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/nybble/!svn/ver/4810/FashionAde/trunk/app/FashionAde.Web.Controllers/MVCInteraction/WebGarmentDetails.cs
+END
+FriendsData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/nybble/!svn/ver/4541/FashionAde/trunk/app/FashionAde.Web.Controllers/MVCInteraction/FriendsData.cs
+END
+Feedback.cs
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/nybble/!svn/ver/4899/FashionAde/trunk/app/FashionAde.Web.Controllers/MVCInteraction/Feedback.cs
+END
+OutfitView.cs
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/nybble/!svn/ver/4717/FashionAde/trunk/app/FashionAde.Web.Controllers/MVCInteraction/OutfitView.cs
+END
+GarmentsListData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/nybble/!svn/ver/4549/FashionAde/trunk/app/FashionAde.Web.Controllers/MVCInteraction/GarmentsListData.cs
+END
+SeasonHelper.cs
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/nybble/!svn/ver/4717/FashionAde/trunk/app/FashionAde.Web.Controllers/MVCInteraction/SeasonHelper.cs
+END
+UserRegistration.cs
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/nybble/!svn/ver/4907/FashionAde/trunk/app/FashionAde.Web.Controllers/MVCInteraction/UserRegistration.cs
+END
+Resources.cs
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/nybble/!svn/ver/4539/FashionAde/trunk/app/FashionAde.Web.Controllers/MVCInteraction/Resources.cs
+END

@@ -1,0 +1,50 @@
+﻿using System.Web.Mvc;
+using System.Web.Security;
+using FashionAde.Core.DataInterfaces;
+using System.Collections.Generic;
+using FashionAde.Core;
+using FashionAde.ApplicationServices;
+using FashionAde.OutfitUpdaterImportation.Controllers;
+
+
+namespace FashionAde.Web.Controllers
+{
+    [HandleError]
+    public class HomeController : BaseController
+    {
+        private IClosetOutfitRepository closetOutfitRepository;
+        private IClosetRepository closetRepository;
+        private IContentService contentService;
+        private IUserGarmentRepository userGarmentRepository;
+
+        public HomeController(IClosetOutfitRepository closetOutfitRepository, IClosetRepository closetRepository, IUserGarmentRepository userGarmentRepository, IContentService contentService)
+        {
+            this.closetOutfitRepository = closetOutfitRepository;
+            this.closetRepository = closetRepository;
+            this.userGarmentRepository = userGarmentRepository;
+            this.contentService = contentService;
+        }
+
+        public ActionResult Index()
+        {
+            MembershipUser user = Membership.GetUser();
+            if (user != null)
+                return RedirectToAction("RegisteredUser");
+
+            return View();
+        }
+
+        public ActionResult RegisteredUser()
+        {
+            IList<ClosetOutfitView> lst = closetOutfitRepository.GetTopRatedOutfits(this.UserId);
+            foreach (ClosetOutfitView cov in lst)
+                cov.ShowAddToMyCloset = false;
+            
+            ViewData["topRatedOutfits"] = lst;
+            ViewData["recentlyUploadedGarments"] = userGarmentRepository.GetRecentlyUploaded(this.ProxyLoggedUser);
+            ViewData["styleAlerts"] = contentService.GetRandomStyleAlerts((IList<FashionFlavor>)ViewData["fashionFlavors"]);
+            
+            return View(closetRepository.Get(this.ClosetId));
+        }
+    }
+}

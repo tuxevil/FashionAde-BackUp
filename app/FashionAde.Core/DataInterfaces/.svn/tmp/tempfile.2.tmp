@@ -1,0 +1,17 @@
+﻿using FashionAde.Core.Clothing;
+using FashionAde.Core.OutfitCombination;
+using SharpArch.Core.PersistenceSupport;
+using FashionAde.Core.OutfitEngine;
+using System.Collections.Generic;
+
+namespace FashionAde.Core.DataInterfaces
+{
+    public interface IPreCombinationRepository : IRepository<PreCombination>
+    {
+<<<<<<< .working
+        PreCombination GetByGarments(IList<Garment> garments, FashionFlavor ff);
+=======
+        IList<PreCombination> GetFirsts(int maxResults);
+>>>>>>> .merge-right.r4360
+    }
+}

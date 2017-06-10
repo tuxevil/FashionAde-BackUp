@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using FashionAde.Core;
+using FashionAde.Core.Clothing;
+using FashionAde.Core.DataInterfaces;
+using FashionAde.Core.OutfitEngine;
+using NHibernate;
+using NHibernate.Criterion;
+using SharpArch.Data.NHibernate;
+
+namespace FashionAde.Data.Repository
+{
+    public class PreCombinationRepository : Repository<PreCombination>, IPreCombinationRepository
+    {
+        public PreCombination GetByGarments(IList<Garment> garments, FashionFlavor fashionFlavor)
+        {
+            ICriteria crit = Session.CreateCriteria(typeof(PreCombination));
+            for (int i = 0; i < garments.Count; i++)
+            {
+                // Make sure it is in any position to avoid duplicates.
+                Disjunction dis = new Disjunction();
+                for (int j = 0; j < garments.Count; j++)
+                    dis.Add(Restrictions.Eq(string.Format("Garment{0}", i + 1), garments[j].PreGarment));
+                crit.Add(dis);
+            }
+            
+            crit.SetMaxResults(1);
+            PreCombination pc = crit.UniqueResult<PreCombination>();
+            return pc;
+        }
+
+        public IList<PreCombination> GetFirsts(int maxResults)
+        {
+            ICriteria crit = Session.CreateCriteria(typeof(PreCombination));
+            crit.SetMaxResults(maxResults);
+            return crit.List<PreCombination>();
+        }
+    }
+}

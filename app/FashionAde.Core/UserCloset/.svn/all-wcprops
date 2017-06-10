@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/nybble/!svn/ver/4741/FashionAde/trunk/app/FashionAde.Core/UserCloset
+END
+ClosetStatus.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/nybble/!svn/ver/4412/FashionAde/trunk/app/FashionAde.Core/UserCloset/ClosetStatus.cs
+END
+GarmentDetails.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/nybble/!svn/ver/4910/FashionAde/trunk/app/FashionAde.Core/UserCloset/GarmentDetails.cs
+END
+ClosetOutfit.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/nybble/!svn/ver/4741/FashionAde/trunk/app/FashionAde.Core/UserCloset/ClosetOutfit.cs
+END
+Rating.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/nybble/!svn/ver/4910/FashionAde/trunk/app/FashionAde.Core/UserCloset/Rating.cs
+END
+ClosetGarment.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/nybble/!svn/ver/4412/FashionAde/trunk/app/FashionAde.Core/UserCloset/ClosetGarment.cs
+END
+UserOutfit.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/nybble/!svn/ver/4600/FashionAde/trunk/app/FashionAde.Core/UserCloset/UserOutfit.cs
+END
+Closet.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/nybble/!svn/ver/4728/FashionAde/trunk/app/FashionAde.Core/UserCloset/Closet.cs
+END

@@ -1,0 +1,100 @@
+2010-06-23 16:22:03,481 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT this_.PartnerId as PartnerId0_0_, this_.Name as Name0_0_, this_.Code as Code0_0_, this_.ColorScheme as ColorSch4_0_0_, this_.HeaderLayout as HeaderLa5_0_0_, this_.FooterLayout as FooterLa6_0_0_, this_.WebsiteUri as WebsiteUri0_0_ FROM Partners this_ WHERE this_.Code = ?p0;?p0 = 'ZP'
+
+2010-06-23 16:22:04,588 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT this_.TrendId as TrendId57_0_, this_.Name as Name57_0_ FROM Trends this_
+
+2010-06-23 16:22:04,634 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT this_.SilouhetteId as Silouhet1_38_0_, this_.ImportanceOrder as Importan2_38_0_, this_.ImageUri as ImageUri38_0_, this_.Description as Descript4_38_0_, this_.CategoryId as CategoryId38_0_, this_.ShapeId as ShapeId38_0_, this_.StructureId as Structur7_38_0_ FROM Silouhettes this_
+
+2010-06-23 16:22:04,962 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT this_.PatternId as PatternId6_0_, this_.ImageUri as ImageUri6_0_, this_.Type as Type6_0_, this_.Description as Descript4_6_0_ FROM Patterns this_ ORDER BY this_.Description asc
+
+2010-06-23 16:22:04,977 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT this_.ColorFamilyId as ColorFam1_28_0_, this_.Description as Descript2_28_0_, this_.IsPrimary as IsPrimary28_0_, this_.IsSecondary as IsSecond4_28_0_, this_.IsNeutral as IsNeutral28_0_, this_.AnalogousFamilyId as Analogou6_28_0_, this_.AnalogousFamily2Id as Analogou7_28_0_, this_.ComplimentaryFamilyId as Complime8_28_0_ FROM ColorFamilies this_
+
+2010-06-23 16:22:04,977 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT this_.OutfitUpdaterId as OutfitUp1_26_0_, this_.Name as Name26_0_, this_.Keywords as Keywords26_0_, this_.Description as Descript4_26_0_, this_.ExternalId as ExternalId26_0_, this_.Price as Price26_0_, this_.BuyUrl as BuyUrl26_0_, this_.ImageUrl as ImageUrl26_0_, this_.Status as Status26_0_, this_.PartnerId as PartnerId26_0_, this_.SilouhetteId as Silouhe11_26_0_, this_.PatternId as PatternId26_0_, this_.ColorFamilyId as ColorFa13_26_0_ FROM OutfitUpdaters this_ WHERE this_.PartnerId = ?p0;?p0 = 2
+
+2010-06-23 16:22:07,424 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT this_.ColorFamilyKeywordsByPartnerId as ColorFam1_21_0_, this_.Keywords as Keywords21_0_, this_.ColorFamilyId as ColorFam3_21_0_, this_.PartnerId as PartnerId21_0_ FROM ColorFamilyKeywordsByPartners this_
+
+2010-06-23 16:22:07,440 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT this_.PatternKeywordsByPartnerId as PatternK1_3_0_, this_.Keywords as Keywords3_0_, this_.PatternId as PatternId3_0_, this_.PartnerId as PartnerId3_0_ FROM PatternKeywordsByPartners this_
+
+2010-06-23 16:22:07,455 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT this_.SilouhetteKeywordsByPartnerId as Silouhet1_20_0_, this_.Keywords as Keywords20_0_, this_.SilouhetteId as Silouhet3_20_0_, this_.PartnerId as PartnerId20_0_ FROM SilouhetteKeywordsByPartners this_
+
+2010-06-23 16:22:07,985 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT keywords0_.trendid as trendid0_, keywords0_.keyword as keyword0_ FROM trendkeywords keywords0_ WHERE keywords0_.trendid=?p0;?p0 = 1
+
+2010-06-23 16:22:08,017 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT keywords0_.trendid as trendid0_, keywords0_.keyword as keyword0_ FROM trendkeywords keywords0_ WHERE keywords0_.trendid=?p0;?p0 = 2
+
+2010-06-23 16:22:08,017 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT keywords0_.trendid as trendid0_, keywords0_.keyword as keyword0_ FROM trendkeywords keywords0_ WHERE keywords0_.trendid=?p0;?p0 = 3
+
+2010-06-23 16:22:08,017 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT keywords0_.trendid as trendid0_, keywords0_.keyword as keyword0_ FROM trendkeywords keywords0_ WHERE keywords0_.trendid=?p0;?p0 = 4
+
+2010-06-23 16:22:08,017 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT keywords0_.trendid as trendid0_, keywords0_.keyword as keyword0_ FROM trendkeywords keywords0_ WHERE keywords0_.trendid=?p0;?p0 = 5
+
+2010-06-23 16:22:08,017 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT keywords0_.trendid as trendid0_, keywords0_.keyword as keyword0_ FROM trendkeywords keywords0_ WHERE keywords0_.trendid=?p0;?p0 = 6
+
+2010-06-23 16:22:08,032 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT keywords0_.trendid as trendid0_, keywords0_.keyword as keyword0_ FROM trendkeywords keywords0_ WHERE keywords0_.trendid=?p0;?p0 = 7
+
+2010-06-23 16:22:08,032 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT keywords0_.trendid as trendid0_, keywords0_.keyword as keyword0_ FROM trendkeywords keywords0_ WHERE keywords0_.trendid=?p0;?p0 = 8
+
+2010-06-23 16:22:08,032 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT keywords0_.trendid as trendid0_, keywords0_.keyword as keyword0_ FROM trendkeywords keywords0_ WHERE keywords0_.trendid=?p0;?p0 = 9
+
+2010-06-23 16:22:08,032 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT keywords0_.trendid as trendid0_, keywords0_.keyword as keyword0_ FROM trendkeywords keywords0_ WHERE keywords0_.trendid=?p0;?p0 = 10
+
+2010-06-23 16:22:08,032 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT keywords0_.trendid as trendid0_, keywords0_.keyword as keyword0_ FROM trendkeywords keywords0_ WHERE keywords0_.trendid=?p0;?p0 = 11
+
+2010-06-23 16:22:08,048 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT keywords0_.trendid as trendid0_, keywords0_.keyword as keyword0_ FROM trendkeywords keywords0_ WHERE keywords0_.trendid=?p0;?p0 = 12
+
+2010-06-23 16:22:08,048 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT keywords0_.trendid as trendid0_, keywords0_.keyword as keyword0_ FROM trendkeywords keywords0_ WHERE keywords0_.trendid=?p0;?p0 = 13
+
+2010-06-23 16:22:08,048 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT keywords0_.trendid as trendid0_, keywords0_.keyword as keyword0_ FROM trendkeywords keywords0_ WHERE keywords0_.trendid=?p0;?p0 = 14
+
+2010-06-23 16:22:08,048 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT keywords0_.trendid as trendid0_, keywords0_.keyword as keyword0_ FROM trendkeywords keywords0_ WHERE keywords0_.trendid=?p0;?p0 = 15
+
+2010-06-23 16:22:08,048 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT keywords0_.trendid as trendid0_, keywords0_.keyword as keyword0_ FROM trendkeywords keywords0_ WHERE keywords0_.trendid=?p0;?p0 = 16
+
+2010-06-23 16:22:08,063 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT keywords0_.trendid as trendid0_, keywords0_.keyword as keyword0_ FROM trendkeywords keywords0_ WHERE keywords0_.trendid=?p0;?p0 = 17
+
+2010-06-23 16:22:08,063 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT keywords0_.trendid as trendid0_, keywords0_.keyword as keyword0_ FROM trendkeywords keywords0_ WHERE keywords0_.trendid=?p0;?p0 = 18
+
+2010-06-23 16:22:08,063 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT keywords0_.trendid as trendid0_, keywords0_.keyword as keyword0_ FROM trendkeywords keywords0_ WHERE keywords0_.trendid=?p0;?p0 = 19
+
+2010-06-23 16:22:08,063 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT keywords0_.trendid as trendid0_, keywords0_.keyword as keyword0_ FROM trendkeywords keywords0_ WHERE keywords0_.trendid=?p0;?p0 = 20
+
+2010-06-23 16:22:08,063 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT keywords0_.trendid as trendid0_, keywords0_.keyword as keyword0_ FROM trendkeywords keywords0_ WHERE keywords0_.trendid=?p0;?p0 = 21
+
+2010-06-23 16:22:08,204 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - Reading high value:select next_hi from _uniquekey where table_name = 'outfitupdaters' for update
+
+2010-06-23 16:22:08,235 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - Updating high value:update _uniquekey set next_hi = ?p0 where next_hi = ?p1 and table_name = 'outfitupdaters';?p0 = 34, ?p1 = 33
+
+2010-06-23 16:22:10,105 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - INSERT INTO OutfitUpdaters (Name, Keywords, Description, ExternalId, Price, BuyUrl, ImageUrl, Status, PartnerId, SilouhetteId, PatternId, ColorFamilyId, OutfitUpdaterId) VALUES (?p0, ?p1, ?p2, ?p3, ?p4, ?p5, ?p6, ?p7, ?p8, ?p9, ?p10, ?p11, ?p12);?p0 = 'Red Dot Leo New - Cotton Knits 3/4 Sleeve British Tee (Purple Blossom) - Apparel', ?p1 = 'Red Dot - Cotton Knits 3/4 Sleeve British Tee (Purple Blossom) - Apparel MM4W007 Red Dot - Cotton Knits 3/4 Sleeve British Tee (Rodeo Drive) - Apparel MM4W007 Red Dot - Cotton Knits 3/4 Sleeve British Tee (Parasail) - Apparel MM4W007 Red Dot - Cotton Knits 3/4 Sleeve British Tee (Sun Shower) -', ?p2 = 'Zappos.com is proud to offer the Red Dot - Cotton Knits 3/4 Sleeve British Tee (Purple Blossom) - Apparel: A versatile wardrobe winner. ; Red Dot&amp;#8482;, a collection of three dots&amp;#8482;, boasts a wider cut and more relaxed fit than the original. ; Elegant boat neckline. ; Three-quarter sleeves wear fabulously every season. ; Signature flat-lock stitching. ; Falls at the hip. ; 100% combed cotton. ; Machine wash cold, tumble dry low. ; Made in the U.S.A.', ?p3 = '7371582222226', ?p4 = 60,00, ?p5 = 'http://www.tkqlhce.com/click-3636043-10273706?url=http%3A%2F%2Fwww.zappos.com%2Fn%2Fredirect.cgi%3Fq%3Dvz362532601z2%26zcj%3D1', ?p6 = 'http://www.zappos.com/images/z/1/2/3/1233256-t-THUMBNAIL.jpg', ?p7 = 1, ?p8 = 2, ?p9 = 128, ?p10 = 7, ?p11 = 2, ?p12 = 16533
+
+2010-06-23 16:22:10,230 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - INSERT INTO OutfitUpdatersByTrend (OutfitUpdaterId, TrendId) VALUES (?p0, ?p1);?p0 = 16533, ?p1 = 7
+
+2010-06-23 16:22:10,354 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT this_.OutfitUpdaterId as OutfitUp1_26_8_, this_.Name as Name26_8_, this_.Keywords as Keywords26_8_, this_.Description as Descript4_26_8_, this_.ExternalId as ExternalId26_8_, this_.Price as Price26_8_, this_.BuyUrl as BuyUrl26_8_, this_.ImageUrl as ImageUrl26_8_, this_.Status as Status26_8_, this_.PartnerId as PartnerId26_8_, this_.SilouhetteId as Silouhe11_26_8_, this_.PatternId as PatternId26_8_, this_.ColorFamilyId as ColorFa13_26_8_, silouhette2_.SilouhetteId as Silouhet1_38_0_, silouhette2_.ImportanceOrder as Importan2_38_0_, silouhette2_.ImageUri as ImageUri38_0_, silouhette2_.Description as Descript4_38_0_, silouhette2_.CategoryId as CategoryId38_0_, silouhette2_.ShapeId as ShapeId38_0_, silouhette2_.StructureId as Structur7_38_0_, shape3_.ShapeId as ShapeId46_1_, shape3_.Type as Type46_1_, shape3_.Description as Descript3_46_1_, structure4_.StructureId as Structur1_54_2_, structure4_.Type as Type54_2_, structure4_.Description as Descript3_54_2_, pattern5_.PatternId as PatternId6_3_, pattern5_.ImageUri as ImageUri6_3_, pattern5_.Type as Type6_3_, pattern5_.Description as Descript4_6_3_, colorfamil6_.ColorFamilyId as ColorFam1_28_4_, colorfamil6_.Description as Descript2_28_4_, colorfamil6_.IsPrimary as IsPrimary28_4_, colorfamil6_.IsSecondary as IsSecond4_28_4_, colorfamil6_.IsNeutral as IsNeutral28_4_, colorfamil6_.AnalogousFamilyId as Analogou6_28_4_, colorfamil6_.AnalogousFamily2Id as Analogou7_28_4_, colorfamil6_.ComplimentaryFamilyId as Complime8_28_4_, colorfamil7_.ColorFamilyId as ColorFam1_28_5_, colorfamil7_.Description as Descript2_28_5_, colorfamil7_.IsPrimary as IsPrimary28_5_, colorfamil7_.IsSecondary as IsSecond4_28_5_, colorfamil7_.IsNeutral as IsNeutral28_5_, colorfamil7_.AnalogousFamilyId as Analogou6_28_5_, colorfamil7_.AnalogousFamily2Id as Analogou7_28_5_, colorfamil7_.ComplimentaryFamilyId as Complime8_28_5_, colorfamil8_.ColorFamilyId as ColorFam1_28_6_, colorfamil8_.Description as Descript2_28_6_, colorfamil8_.IsPrimary as IsPrimary28_6_, colorfamil8_.IsSecondary as IsSecond4_28_6_, colorfamil8_.IsNeutral as IsNeutral28_6_, colorfamil8_.AnalogousFamilyId as Analogou6_28_6_, colorfamil8_.AnalogousFamily2Id as Analogou7_28_6_, colorfamil8_.ComplimentaryFamilyId as Complime8_28_6_, colorfamil9_.ColorFamilyId as ColorFam1_28_7_, colorfamil9_.Description as Descript2_28_7_, colorfamil9_.IsPrimary as IsPrimary28_7_, colorfamil9_.IsSecondary as IsSecond4_28_7_, colorfamil9_.IsNeutral as IsNeutral28_7_, colorfamil9_.AnalogousFamilyId as Analogou6_28_7_, colorfamil9_.AnalogousFamily2Id as Analogou7_28_7_, colorfamil9_.ComplimentaryFamilyId as Complime8_28_7_ FROM OutfitUpdaters this_ left outer join Silouhettes silouhette2_ on this_.SilouhetteId=silouhette2_.SilouhetteId left outer join Shapes shape3_ on silouhette2_.ShapeId=shape3_.ShapeId left outer join Structures structure4_ on silouhette2_.StructureId=structure4_.StructureId left outer join Patterns pattern5_ on this_.PatternId=pattern5_.PatternId left outer join ColorFamilies colorfamil6_ on this_.ColorFamilyId=colorfamil6_.ColorFamilyId left outer join ColorFamilies colorfamil7_ on colorfamil6_.AnalogousFamilyId=colorfamil7_.ColorFamilyId left outer join ColorFamilies colorfamil8_ on colorfamil6_.AnalogousFamily2Id=colorfamil8_.ColorFamilyId left outer join ColorFamilies colorfamil9_ on colorfamil6_.ComplimentaryFamilyId=colorfamil9_.ColorFamilyId WHERE (this_.Status = ?p0);?p0 = 1
+
+2010-06-23 16:22:10,588 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT this_.PreCombinationId as PreCombi1_68_0_, this_.AverageUserRating as AverageU2_68_0_, this_.AverageFriendRating as AverageF3_68_0_, this_.AverageWearRating as AverageW4_68_0_, this_.Status as Status68_0_, this_.FashionFlavorId as FashionF6_68_0_, this_.Garment1Id as Garment7_68_0_, this_.Garment2Id as Garment8_68_0_, this_.Garment3Id as Garment9_68_0_, this_.Garment4Id as Garment10_68_0_, this_.Garment5Id as Garment11_68_0_ FROM PreCombinations this_ WHERE this_.Status = ?p0;?p0 = 1
+
+2010-06-23 16:22:10,760 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT this_.StyleRuleId as StyleRul1_11_0_, this_.ColorBlending_MonotoneColor as ColorBle2_11_0_, this_.ColorBlending_AnalogousColor as ColorBle3_11_0_, this_.ColorBlending_ComplimentaryColor as ColorBle4_11_0_, this_.ColorBlending_NeutralPrimaryColor as ColorBle5_11_0_, this_.ColorBlending_NeutralSecondaryColor as ColorBle6_11_0_, this_.ColorBlending_NeutralColor as ColorBle7_11_0_, this_.MaximumGarments as MaximumG8_11_0_, this_.MinimumGarments as MinimumG9_11_0_, this_.ShowPartnerGarments as ShowPar10_11_0_, this_.MaximumLayers as Maximum11_11_0_, this_.MinimumLayers as Minimum12_11_0_, this_.FashionFlavorId as Fashion13_11_0_ FROM StyleRules this_
+
+2010-06-23 16:22:10,806 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT pregarment0_.PreGarmentId as PreGarme1_37_0_, pregarment0_.PatternType as PatternT2_37_0_, pregarment0_.SilouhetteId as Silouhet3_37_0_, pregarment0_.ColorFamilyId as ColorFam4_37_0_ FROM PreGarments pregarment0_ WHERE pregarment0_.PreGarmentId=?p0;?p0 = 0
+
+2010-06-23 16:22:10,822 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT layers0_.Silouhette_id as Silouhette1_0_, layers0_.Layer as Layer0_ FROM Layers layers0_ WHERE layers0_.Silouhette_id=?p0;?p0 = 1
+
+2010-06-23 16:22:10,838 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT layers0_.Silouhette_id as Silouhette1_0_, layers0_.Layer as Layer0_ FROM Layers layers0_ WHERE layers0_.Silouhette_id=?p0;?p0 = 128
+
+2010-06-23 16:22:10,900 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT patterns0_.StyleRuleId as StyleRul4_1_, patterns0_.PatternRuleId as PatternR1_1_, patterns0_.PatternRuleId as PatternR1_65_0_, patterns0_.FromItem as FromItem65_0_, patterns0_.ToItem as ToItem65_0_, patterns0_.StyleRuleId as StyleRul4_65_0_ FROM StyleRulesPatterns patterns0_ WHERE patterns0_.StyleRuleId=?p0;?p0 = 1
+
+2010-06-23 16:22:10,916 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT pregarment0_.PreGarmentId as PreGarme1_37_0_, pregarment0_.PatternType as PatternT2_37_0_, pregarment0_.SilouhetteId as Silouhet3_37_0_, pregarment0_.ColorFamilyId as ColorFam4_37_0_ FROM PreGarments pregarment0_ WHERE pregarment0_.PreGarmentId=?p0;?p0 = 667
+
+2010-06-23 16:22:10,916 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT layers0_.Silouhette_id as Silouhette1_0_, layers0_.Layer as Layer0_ FROM Layers layers0_ WHERE layers0_.Silouhette_id=?p0;?p0 = 96
+
+2010-06-23 16:22:10,916 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT structure0_.StructureId as Structur1_54_0_, structure0_.Type as Type54_0_, structure0_.Description as Descript3_54_0_ FROM Structures structure0_ WHERE structure0_.StructureId=?p0;?p0 = 1
+
+2010-06-23 16:22:10,916 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT shape0_.ShapeId as ShapeId46_0_, shape0_.Type as Type46_0_, shape0_.Description as Descript3_46_0_ FROM Shapes shape0_ WHERE shape0_.ShapeId=?p0;?p0 = 7
+
+2010-06-23 16:22:10,916 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT pregarment0_.PreGarmentId as PreGarme1_37_0_, pregarment0_.PatternType as PatternT2_37_0_, pregarment0_.SilouhetteId as Silouhet3_37_0_, pregarment0_.ColorFamilyId as ColorFam4_37_0_ FROM PreGarments pregarment0_ WHERE pregarment0_.PreGarmentId=?p0;?p0 = 666
+
+2010-06-23 16:22:11,149 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT patterns0_.StyleRuleId as StyleRul4_1_, patterns0_.PatternRuleId as PatternR1_1_, patterns0_.PatternRuleId as PatternR1_65_0_, patterns0_.FromItem as FromItem65_0_, patterns0_.ToItem as ToItem65_0_, patterns0_.StyleRuleId as StyleRul4_65_0_ FROM StyleRulesPatterns patterns0_ WHERE patterns0_.StyleRuleId=?p0;?p0 = 3
+
+2010-06-23 16:22:11,196 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT pregarment0_.PreGarmentId as PreGarme1_37_0_, pregarment0_.PatternType as PatternT2_37_0_, pregarment0_.SilouhetteId as Silouhet3_37_0_, pregarment0_.ColorFamilyId as ColorFam4_37_0_ FROM PreGarments pregarment0_ WHERE pregarment0_.PreGarmentId=?p0;?p0 = 1359
+
+2010-06-23 16:22:11,196 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT layers0_.Silouhette_id as Silouhette1_0_, layers0_.Layer as Layer0_ FROM Layers layers0_ WHERE layers0_.Silouhette_id=?p0;?p0 = 197
+
+2010-06-23 16:22:11,243 [TestRunnerThread] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - call uspUpdateOutfitUpdaterStatus();
+

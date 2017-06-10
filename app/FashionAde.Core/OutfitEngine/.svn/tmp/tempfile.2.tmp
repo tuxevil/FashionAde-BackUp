@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using SharpArch.Core.DomainModel;
+using FashionAde.Core.Clothing;
+
+namespace FashionAde.Core.OutfitEngine
+{
+    public class PreCombination : Entity
+    {
+        public virtual FashionFlavor FashionFlavor { get; set; }
+        public virtual PreGarment Garment1 { get; set; }
+        public virtual PreGarment Garment2 { get; set; }
+        public virtual PreGarment Garment3 { get; set; }
+        public virtual PreGarment Garment4 { get; set; }
+        public virtual PreGarment Garment5 { get; set; }
+        public virtual PreGarment Garment6 { get; set; }
+        public virtual PreGarment Garment7 { get; set; }
+        public virtual PreGarment Garment8 { get; set; }
+        public virtual PreGarment Garment9 { get; set; }
+        public virtual PreGarment Garment10 { get; set; }
+
+        private float averageUserRating;
+        private float averageFriendRating;
+        private float averageWearRating;
+
+        //private PreCombinationStatus status;
+
+        public virtual float AverageUserRating
+        {
+            get { return averageUserRating; }
+            protected set { averageUserRating = value; }
+        }
+
+        public virtual float AverageFriendRating
+        {
+            get { return averageFriendRating; }
+            protected set { averageFriendRating = value; }
+        }
+
+        public virtual float AverageWearRating
+        {
+            get { return averageWearRating; }
+            protected set { averageWearRating = value; }
+        }
+
+        //public virtual PreCombinationStatus Status
+        //{
+        //    get { return status; }
+        //    set { status = value; }
+        //}
+
+        public PreCombination() { }
+        public PreCombination(int id)
+        {
+            this.Id = id;
+        }
+    }
+
+    public enum PreCombinationStatus
+    {
+        New = 0,
+        Processed = 1
+    }
+}

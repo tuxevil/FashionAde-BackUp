@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/nybble/!svn/ver/4908/FashionAde/trunk/app/FashionAde.Web
+END
+Global.asax.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/nybble/!svn/ver/4884/FashionAde/trunk/app/FashionAde.Web/Global.asax.cs
+END
+commingsoon.htm
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/nybble/!svn/ver/4487/FashionAde/trunk/app/FashionAde.Web/commingsoon.htm
+END
+Web.config
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/nybble/!svn/ver/4911/FashionAde/trunk/app/FashionAde.Web/Web.config
+END
+NHibernate.config
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/nybble/!svn/ver/4911/FashionAde/trunk/app/FashionAde.Web/NHibernate.config
+END
+FashionAde.Web.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/nybble/!svn/ver/4899/FashionAde/trunk/app/FashionAde.Web/FashionAde.Web.csproj
+END

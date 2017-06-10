@@ -1,0 +1,1227 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">False</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:FashionAde.Web.Controllers.MVCInteraction.GarmentsListData">
+      <Item value="NewGarments" priority="2" />
+      <Item value="NewWishGarments" priority="1" />
+      <Item value="NewWishGarmentsIds" priority="2" />
+      <Item value="MyGarmentsIds" priority="1" />
+      <Item value="MyWishGarmentsIds" priority="0" />
+      <Item value="NewGarmentsIds" priority="1" />
+      <Item value="MyGarments" priority="0" />
+      <Item value="Action" priority="0" />
+      <Item value="Controller" priority="0" />
+      <Item value="Error" priority="0" />
+      <Item value="FashionFlavors" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IList`1">
+      <Item value="Count" priority="7" />
+      <Item value="Add" priority="6" />
+      <Item value="Contains" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Default">
+      <Item value="NewGarmentsItems" priority="0" />
+      <Item value="new" priority="124" />
+      <Item value="NewWishListItems" priority="0" />
+      <Item value="Html" priority="7" />
+      <Item value="user" priority="12" />
+      <Item value="Common" priority="2" />
+      <Item value="FashionAde" priority="2" />
+      <Item value="Web" priority="0" />
+      <Item value="garment" priority="3" />
+      <Item value="closetRepository" priority="5" />
+      <Item value="List" priority="21" />
+      <Item value="List&lt;int&gt;" priority="10" />
+      <Item value="myWishGarments" priority="1" />
+      <Item value="myWarmentsIds" priority="1" />
+      <Item value="myGarments" priority="1" />
+      <Item value="garmentRepository" priority="5" />
+      <Item value="myGarmentsIds" priority="0" />
+      <Item value="if" priority="52" />
+      <Item value="mu" priority="6" />
+      <Item value="Response" priority="4" />
+      <Item value="public" priority="27" />
+      <Item value="class" priority="1" />
+      <Item value="string" priority="67" />
+      <Item value="int" priority="44" />
+      <Item value="ViewResult" priority="1" />
+      <Item value="Request" priority="1" />
+      <Item value="Length" priority="2" />
+      <Item value="foreach" priority="17" />
+      <Item value="search" priority="2" />
+      <Item value="else" priority="10" />
+      <Item value="IFriendRepository" priority="0" />
+      <Item value="friend" priority="1" />
+      <Item value="FriendStatus" priority="9" />
+      <Item value="friendStatus" priority="0" />
+      <Item value="status" priority="9" />
+      <Item value="null" priority="30" />
+      <Item value="crit" priority="23" />
+      <Item value="Expression" priority="10" />
+      <Item value="limit" priority="1" />
+      <Item value="ModelStateDictionary" priority="1" />
+      <Item value="bool" priority="6" />
+      <Item value="Model" priority="9" />
+      <Item value="FriendsData" priority="1" />
+      <Item value="fd" priority="0" />
+      <Item value="WishGarment" priority="0" />
+      <Item value="IFashionFlavorRepository" priority="6" />
+      <Item value="fashionFlavorRepository" priority="10" />
+      <Item value="ids" priority="3" />
+      <Item value="FashionFlavorRepository" priority="1" />
+      <Item value="garmentsIds" priority="3" />
+      <Item value="Ids" priority="0" />
+      <Item value="this" priority="56" />
+      <Item value="OutfitEngineServiceProxy" priority="0" />
+      <Item value="OutfitEngineServiceClient" priority="0" />
+      <Item value="wls" priority="0" />
+      <Item value="mygarmentsids" priority="1" />
+      <Item value="IList" priority="16" />
+      <Item value="FashionFlavor" priority="1" />
+      <Item value="fashionflavorsids" priority="1" />
+      <Item value="ff" priority="0" />
+      <Item value="return" priority="31" />
+      <Item value="lstfalvors" priority="0" />
+      <Item value="Assert" priority="1" />
+      <Item value="GarmentsListData" priority="0" />
+      <Item value="gld" priority="9" />
+      <Item value="mygarments" priority="0" />
+      <Item value="ClosetGarment" priority="3" />
+      <Item value="closetGarments" priority="2" />
+      <Item value="List&lt;ClosetGarment&gt;" priority="0" />
+      <Item value="Closet" priority="7" />
+      <Item value="closetGarmentsIds" priority="4" />
+      <Item value="userGarmentRepository" priority="1" />
+      <Item value="ug" priority="3" />
+      <Item value="mywishlist" priority="0" />
+      <Item value="wishGarmentsIds" priority="0" />
+      <Item value="List&lt;FashionFlavor&gt;" priority="0" />
+      <Item value="Url" priority="0" />
+      <Item value="BaseController" priority="0" />
+      <Item value="OUImportationLine" priority="8" />
+      <Item value="DateTime" priority="15" />
+      <Item value="decimal" priority="2" />
+      <Item value="char" priority="22" />
+      <Item value="void" priority="10" />
+      <Item value="OUImportation" priority="3" />
+      <Item value="importation" priority="11" />
+      <Item value="line" priority="26" />
+      <Item value="dr" priority="1" />
+      <Item value="View" priority="2" />
+      <Item value="HttpRequestExtensions" priority="0" />
+      <Item value="Join" priority="0" />
+      <Item value="private" priority="8" />
+      <Item value="List&lt;OUImportationLine&gt;" priority="2" />
+      <Item value="ImportStatus" priority="0" />
+      <Item value="virtual" priority="3" />
+      <Item value="ImportLineStatus" priority="0" />
+      <Item value="Create" priority="1" />
+      <Item value="true" priority="6" />
+      <Item value="OutfitUpdaterImportation" priority="0" />
+      <Item value="Controllers" priority="0" />
+      <Item value="OUImportationController" priority="2" />
+      <Item value="System" priority="2" />
+      <Item value="IO" priority="0" />
+      <Item value="Path" priority="0" />
+      <Item value="cb" priority="1" />
+      <Item value="Last" priority="0" />
+      <Item value="FileHelpers" priority="0" />
+      <Item value="RunTime" priority="0" />
+      <Item value="ClassBuilder" priority="0" />
+      <Item value="IFormatProvider" priority="2" />
+      <Item value="formatProvider" priority="3" />
+      <Item value="items" priority="3" />
+      <Item value="row" priority="0" />
+      <Item value="for" priority="2" />
+      <Item value="iLoop" priority="1" />
+      <Item value="iFieldCount" priority="0" />
+      <Item value="async" priority="0" />
+      <Item value="path" priority="1" />
+      <Item value="filename" priority="2" />
+      <Item value="totalRecords" priority="4" />
+      <Item value="TimeSpan" priority="1" />
+      <Item value="span" priority="1" />
+      <Item value="endTime" priority="2" />
+      <Item value="startTime" priority="1" />
+      <Item value="object" priority="0" />
+      <Item value="o" priority="1" />
+      <Item value="engine" priority="1" />
+      <Item value="args" priority="2" />
+      <Item value="sync" priority="2" />
+      <Item value="false" priority="6" />
+      <Item value="process" priority="1" />
+      <Item value="try" priority="5" />
+      <Item value="actualLine" priority="5" />
+      <Item value="ex" priority="1" />
+      <Item value="linesWithErrors" priority="5" />
+      <Item value="totalErrors" priority="3" />
+      <Item value="temp" priority="4" />
+      <Item value="CSharp" priority="1" />
+      <Item value="ramTotal" priority="1" />
+      <Item value="CSharpCodeProvider" priority="0" />
+      <Item value="Win32" priority="0" />
+      <Item value="Microsoft" priority="1" />
+      <Item value="VisualBasic" priority="0" />
+      <Item value="Devices" priority="0" />
+      <Item value="Computer" priority="0" />
+      <Item value="ComputerInfo" priority="0" />
+      <Item value="protected" priority="0" />
+      <Item value="ulong" priority="2" />
+      <Item value="lines" priority="10" />
+      <Item value="getAvailableRAM" priority="1" />
+      <Item value="GC" priority="0" />
+      <Item value="CheckLimits" priority="0" />
+      <Item value="float" priority="0" />
+      <Item value="double" priority="0" />
+      <Item value="Process" priority="0" />
+      <Item value="title" priority="0" />
+      <Item value="Write" priority="0" />
+      <Item value="long" priority="2" />
+      <Item value="itemIds" priority="4" />
+      <Item value="Convert" priority="3" />
+      <Item value="e" priority="4" />
+      <Item value="tmpCount" priority="0" />
+      <Item value="uint" priority="0" />
+      <Item value="outfitUpdater" priority="29" />
+      <Item value="OutfitUpdater" priority="19" />
+      <Item value="outfitUpdaterRepository" priority="25" />
+      <Item value="List&lt;OutfitUpdater&gt;" priority="5" />
+      <Item value="importationLine" priority="15" />
+      <Item value="IPartnerRepository" priority="2" />
+      <Item value="IOutfitUpdaterRepository" priority="5" />
+      <Item value="ProcessList" priority="2" />
+      <Item value="partial" priority="0" />
+      <Item value="Partner" priority="7" />
+      <Item value="partner" priority="2" />
+      <Item value="Trends" priority="0" />
+      <Item value="List&lt;Trend&gt;" priority="3" />
+      <Item value="IOUImportationClassBuilder" priority="0" />
+      <Item value="ouImportationClassBuilder" priority="0" />
+      <Item value="ITrendRepository" priority="1" />
+      <Item value="trendRepository" priority="6" />
+      <Item value="trends" priority="2" />
+      <Item value="keyword" priority="3" />
+      <Item value="Trend" priority="0" />
+      <Item value="trend" priority="1" />
+      <Item value="break" priority="1" />
+      <Item value="NHibernate" priority="1" />
+      <Item value="Dialect" priority="0" />
+      <Item value="Connection" priority="1" />
+      <Item value="DriverConnectionProvider" priority="0" />
+      <Item value="Driver" priority="0" />
+      <Item value="Bytecode" priority="1" />
+      <Item value="Castle" priority="0" />
+      <Item value="ProxyFactoryFactory" priority="0" />
+      <Item value="Session" priority="6" />
+      <Item value="Console" priority="4" />
+      <Item value="totalOutfitUpdaters" priority="0" />
+      <Item value="Context" priority="0" />
+      <Item value="ICurrentSessionContext" priority="0" />
+      <Item value="all" priority="0" />
+      <Item value="outfitUpdaters" priority="4" />
+      <Item value="typeof" priority="5" />
+      <Item value="partnerRepository" priority="5" />
+      <Item value="p" priority="3" />
+      <Item value="linesOk" priority="2" />
+      <Item value="Pattern" priority="8" />
+      <Item value="ColorFamily" priority="10" />
+      <Item value="SilouhetteRepository" priority="2" />
+      <Item value="Silouhette" priority="2" />
+      <Item value="id" priority="4" />
+      <Item value="cfid" priority="2" />
+      <Item value="s" priority="1" />
+      <Item value="cf" priority="0" />
+      <Item value="count" priority="5" />
+      <Item value="pcb" priority="4" />
+      <Item value="enum" priority="2" />
+      <Item value="OutfitUpdaterStatus" priority="10" />
+      <Item value="OutfitUpdaterByPreCombination" priority="3" />
+      <Item value="result" priority="7" />
+      <Item value="preCombination" priority="4" />
+      <Item value="List&lt;PreCombination&gt;" priority="2" />
+      <Item value="IStylePhotographRepository" priority="0" />
+      <Item value="IStyleRuleRepository" priority="0" />
+      <Item value="styleRuleRepository" priority="2" />
+      <Item value="StyleRuleRepository" priority="1" />
+      <Item value="IClosetRepository" priority="0" />
+      <Item value="ClosetRepository" priority="0" />
+      <Item value="outfitUpdaterByPreCombination" priority="3" />
+      <Item value="IPreCombinationRepository" priority="0" />
+      <Item value="preCombinationRepository" priority="5" />
+      <Item value="PreCombinationRepository" priority="2" />
+      <Item value="List&lt;OutfitUpdaterByPreCombination&gt;" priority="0" />
+      <Item value="ICriteria" priority="4" />
+      <Item value="maxResults" priority="0" />
+      <Item value="LayerCode" priority="1" />
+      <Item value="layerCodes" priority="0" />
+      <Item value="sil" priority="1" />
+      <Item value="pg" priority="0" />
+      <Item value="PreCombinationStatus" priority="5" />
+      <Item value="IPatternRepository" priority="2" />
+      <Item value="ISilouhetteRepository" priority="2" />
+      <Item value="silouhetteRepository" priority="5" />
+      <Item value="patternRepository" priority="5" />
+      <Item value="IColorFamilyRepository" priority="1" />
+      <Item value="colorFamilyRepository" priority="5" />
+      <Item value="List&lt;Silouhette&gt;" priority="1" />
+      <Item value="List&lt;Pattern&gt;" priority="1" />
+      <Item value="List&lt;ColorFamily&gt;" priority="1" />
+      <Item value="silouhettes" priority="2" />
+      <Item value="patterns" priority="1" />
+      <Item value="colorFamilies" priority="1" />
+      <Item value="silouhette" priority="2" />
+      <Item value="pattern" priority="2" />
+      <Item value="colorFamily" priority="2" />
+      <Item value="PatternRepository" priority="2" />
+      <Item value="ColorFamilyRepository" priority="2" />
+      <Item value="IOutfitUpdaterByPreCombinationRepository" priority="1" />
+      <Item value="outfitUpdaterByPreCombinationRepository" priority="6" />
+      <Item value="Fabric" priority="2" />
+      <Item value="HashSet&lt;Pattern&gt;" priority="1" />
+      <Item value="HashSet&lt;Garment&gt;" priority="0" />
+      <Item value="HomeRegisteredUserInfo" priority="0" />
+      <Item value="info" priority="6" />
+      <Item value="ViewData" priority="5" />
+      <Item value="ClosetOutfit" priority="4" />
+      <Item value="closet" priority="3" />
+      <Item value="closetOutfitRepository" priority="0" />
+      <Item value="ClosetId" priority="1" />
+      <Item value="OutfitUpdaterRepository" priority="2" />
+      <Item value="OutfitUpdaterByPreCombinationRepository" priority="0" />
+      <Item value="outfitUpdaterByPreCombinations" priority="0" />
+      <Item value="item" priority="0" />
+      <Item value="FieldAccessException" priority="0" />
+      <Item value="processor" priority="4" />
+      <Item value="OutfitEngineProcessor" priority="0" />
+      <Item value="LocalDatabasePath" priority="0" />
+      <Item value="isGuid" priority="0" />
+      <Item value="invitation" priority="3" />
+      <Item value="closetOutfit" priority="5" />
+      <Item value="Nullable" priority="0" />
+      <Item value="RegisteredUser" priority="1" />
+      <Item value="ComponentModel" priority="1" />
+      <Item value="DataAnnotations" priority="1" />
+      <Item value="Password" priority="1" />
+      <Item value="password" priority="0" />
+      <Item value="ConfirmPassword" priority="1" />
+      <Item value="confirmPassword" priority="0" />
+      <Item value="value" priority="1" />
+      <Item value="str" priority="0" />
+      <Item value="PasswordCompare" priority="0" />
+      <Item value="c" priority="0" />
+      <Item value="selectedET" priority="0" />
+      <Item value="FetchMode" priority="0" />
+      <Item value="wishGarments" priority="0" />
+      <Item value="name" priority="4" />
+      <Item value="description" priority="0" />
+      <Item value="keywords" priority="0" />
+      <Item value="externalId" priority="0" />
+      <Item value="price" priority="2" />
+      <Item value="buyUrl" priority="0" />
+      <Item value="imageUrl" priority="0" />
+      <Item value="silouhetteId" priority="0" />
+      <Item value="patternId" priority="0" />
+      <Item value="colorFamilyId" priority="0" />
+      <Item value="partnerId" priority="0" />
+      <Item value="OutfitUpdaterService" priority="2" />
+      <Item value="Utils" priority="0" />
+      <Item value="OutfitUpdaters" priority="0" />
+      <Item value="IOutfitUpdaterService" priority="1" />
+      <Item value="OutfitUpdaterServiceClient" priority="0" />
+      <Item value="outfitUpdaterService" priority="2" />
+      <Item value="TrendRepository" priority="1" />
+      <Item value="closetId" priority="1" />
+      <Item value="outfits" priority="0" />
+      <Item value="query" priority="0" />
+      <Item value="ProxyLoggedUser" priority="0" />
+      <Item value="PartnerRepository" priority="0" />
+      <Item value="friendRatingInvitationRepository" priority="3" />
+      <Item value="success" priority="0" />
+      <Item value="HashSet&lt;Fabric&gt;" priority="0" />
+      <Item value="Json" priority="0" />
+      <Item value="SilouhetteSelection" priority="0" />
+      <Item value="silouhetteSelection" priority="4" />
+      <Item value="ContactUsController" priority="0" />
+      <Item value="IContentService" priority="1" />
+      <Item value="contentService" priority="4" />
+      <Item value="Message" priority="2" />
+      <Item value="Subject" priority="1" />
+      <Item value="Email" priority="4" />
+      <Item value="messageSenderService" priority="0" />
+      <Item value="FeedBack" priority="3" />
+      <Item value="feedBack" priority="8" />
+      <Item value="Name" priority="0" />
+      <Item value="pageSize" priority="3" />
+      <Item value="startPosition" priority="2" />
+      <Item value="endPosition" priority="0" />
+      <Item value="pageCount" priority="3" />
+      <Item value="currentPage" priority="0" />
+      <Item value="totalPages" priority="0" />
+      <Item value="Order" priority="0" />
+      <Item value="PreCombination" priority="0" />
+      <Item value="OutfitCreationController" priority="0" />
+      <Item value="OutfitUpdatersController" priority="0" />
+      <Item value="pageNumber" priority="1" />
+      <Item value="GetFor" priority="0" />
+      <Item value="lst" priority="1" />
+      <Item value="out" priority="2" />
+      <Item value="totalCount" priority="1" />
+      <Item value="ProjectionList" priority="0" />
+      <Item value="GetList" priority="0" />
+      <Item value="Page" priority="0" />
+      <Item value="page" priority="0" />
+      <Item value="date" priority="2" />
+      <Item value="ru" priority="6" />
+      <Item value="MembershipUser" priority="0" />
+      <Item value="Membership" priority="3" />
+      <Item value="registerMemberService" priority="0" />
+      <Item value="RoleProvider" priority="1" />
+      <Item value="MembershipProvider" priority="0" />
+      <Item value="Roles" priority="0" />
+      <Item value="List&lt;string&gt;" priority="1" />
+      <Item value="adminMails" priority="0" />
+      <Item value="mail" priority="0" />
+      <Item value="OutfitResume" priority="3" />
+      <Item value="or" priority="7" />
+      <Item value="outfitView" priority="6" />
+      <Item value="OutfitResumeFriendComments" priority="1" />
+      <Item value="OutfitResumeFriendRating" priority="6" />
+      <Item value="List&lt;OutfitResumeFriendComments&gt;" priority="0" />
+      <Item value="List&lt;OutfitResumeFriendRating&gt;" priority="0" />
+      <Item value="comment" priority="1" />
+      <Item value="rating" priority="13" />
+      <Item value="FriendRating" priority="0" />
+      <Item value="r" priority="1" />
+      <Item value="ClosetOutfitView" priority="1" />
+      <Item value="view" priority="0" />
+      <Item value="userClosetUrl" priority="0" />
+      <Item value="AddFriendComment" priority="0" />
+      <Item value="friendName" priority="1" />
+      <Item value="externalCode" priority="0" />
+      <Item value="titleSilouhette" priority="1" />
+      <Item value="titleCategory" priority="2" />
+      <Item value="titleFabric" priority="1" />
+      <Item value="f" priority="2" />
+      <Item value="titleColor" priority="1" />
+      <Item value="col" priority="0" />
+      <Item value="titlePattern" priority="1" />
+      <Item value="eventTypes" priority="3" />
+      <Item value="EventTypeRepository" priority="0" />
+      <Item value="eventTypeIds" priority="0" />
+      <Item value="EventType" priority="1" />
+      <Item value="eventType" priority="3" />
+      <Item value="binaryCode" priority="1" />
+      <Item value="start" priority="1" />
+      <Item value="ResolveBinaryCode" priority="0" />
+      <Item value="eventTypeCodes" priority="0" />
+      <Item value="alreadyNames" priority="1" />
+      <Item value="continue" priority="0" />
+      <Item value="GetShortNames" priority="0" />
+      <Item value="IRegisteredUserRepository" priority="0" />
+      <Item value="registeredUserRepository" priority="1" />
+      <Item value="userId" priority="0" />
+      <Item value="IsSameUser" priority="1" />
+      <Item value="updater" priority="3" />
+      <Item value="UserId" priority="1" />
+      <Item value="closetOutfitView" priority="5" />
+      <Item value="ClosetStatus" priority="0" />
+      <Item value="RegularExpression" priority="0" />
+      <Item value="ErrorMessage" priority="0" />
+      <Item value="Dictionary&lt;string,object&gt;" priority="1" />
+      <Item value="userModification" priority="0" />
+      <Item value="ModelState" priority="5" />
+      <Item value="secondPropertyName" priority="0" />
+      <Item value="garmentSelected" priority="2" />
+      <Item value="cg" priority="1" />
+      <Item value="Garment" priority="0" />
+      <Item value="mapping" priority="1" />
+      <Item value="outfitId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.HtmlHelper`1">
+      <Item value="ActionLink" priority="0" />
+      <Item value="TextBox" priority="0" />
+      <Item value="Hidden" priority="1" />
+      <Item value="RenderPartial" priority="1" />
+      <Item value="RenderAction" priority="0" />
+      <Item value="ToString" priority="0" />
+      <Item value="ValidationMessageFor" priority="0" />
+      <Item value="ValidationSummary" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.WishList">
+      <Item value="User" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@FashionAde.Web.Common.Common">
+      <Item value="IsNumber" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.DataInterfaces.IClosetRepository">
+      <Item value="GenerateCloset" priority="0" />
+      <Item value="DbContext" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.DataInterfaces.IGarmentRepository">
+      <Item value="GetByIds" priority="4" />
+      <Item value="DbContext" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpResponseBase">
+      <Item value="Redirect" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpRequest">
+      <Item value="QueryString" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.Accounts.RegisteredUser">
+      <Item value="Id" priority="4" />
+      <Item value="Closet" priority="1" />
+      <Item value="EmailAddress" priority="1" />
+      <Item value="NewMail" priority="2" />
+      <Item value="RegistrationCode" priority="2" />
+      <Item value="FullName" priority="0" />
+      <Item value="UserName" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Security.MembershipUser">
+      <Item value="ProviderUserKey" priority="2" />
+      <Item value="Email" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="IsNullOrEmpty" priority="6" />
+      <Item value="Format" priority="8" />
+      <Item value="Empty" priority="9" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentNHibernate.Mapping.CollectionCascadeExpression`1">
+      <Item value="AllDeleteOrphan" priority="0" />
+      <Item value="SaveUpdate" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.DataInterfaces.IFriendRepository">
+      <Item value="Delete" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@FashionAde.Core.Accounts.FriendStatus">
+      <Item value="All" priority="1" />
+      <Item value="Denied" priority="1" />
+      <Item value="Accepted" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NHibernate.ICriteria">
+      <Item value="Add" priority="9" />
+      <Item value="SetMaxResults" priority="2" />
+      <Item value="List" priority="3" />
+      <Item value="UniqueResult" priority="2" />
+      <Item value="SetFetchMode" priority="0" />
+      <Item value="CreateCriteria" priority="2" />
+      <Item value="SetProjection" priority="1" />
+      <Item value="AddOrder" priority="0" />
+      <Item value="SetFirstResult" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@NHibernate.Criterion.Expression">
+      <Item value="Not" priority="0" />
+      <Item value="Eq" priority="8" />
+      <Item value="Gt" priority="0" />
+      <Item value="Or" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Web.Controllers.MVCInteraction.FriendsData">
+      <Item value="Friends" priority="4" />
+      <Item value="List" priority="2" />
+      <Item value="NewFriendsRequest" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.Accounts.Friend">
+      <Item value="Id" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ObjectModel.ReadOnlyCollection`1">
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Count" priority="4" />
+      <Item value="AsReadOnly" priority="2" />
+      <Item value="Add" priority="16" />
+      <Item value="Join" priority="1" />
+      <Item value="Exists" priority="1" />
+      <Item value="AddRange" priority="0" />
+      <Item value="FindAll" priority="0" />
+      <Item value="GetRange" priority="0" />
+      <Item value="Find" priority="2" />
+      <Item value="Sort" priority="0" />
+      <Item value="Reverse" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@FashionAde.Web.Controllers.MVCInteraction.Resources">
+      <Item value="GetFriendProviderPath" priority="1" />
+      <Item value="GetGarmentPath" priority="1" />
+      <Item value="GetWebClosetGarmentPath" priority="5" />
+      <Item value="GetClosetOutfitGarmentViewPath" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.ApplicationServices.OutfitEngineService">
+      <Item value="fashionFlavorRepository" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.DataInterfaces.IFashionFlavorRepository">
+      <Item value="Get" priority="1" />
+      <Item value="GetByIds" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Web.Controllers.OutfitEngineServiceProxy.OutfitEngineServiceClient">
+      <Item value="AddOutfits" priority="1" />
+      <Item value="CreateOutfits" priority="0" />
+      <Item value="AddOutfitsAsync" priority="0" />
+      <Item value="HasValidCombinationsAsync" priority="0" />
+      <Item value="HasValidCombinations" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.Closet">
+      <Item value="Id" priority="2" />
+      <Item value="User" priority="0" />
+      <Item value="PrivacyLevel" priority="0" />
+      <Item value="FavoriteOutfit" priority="1" />
+      <Item value="ClearFavoriteOutfit" priority="0" />
+      <Item value="Garments" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SharpArch.Core.PersistenceSupport.IDbContext">
+      <Item value="BeginTransaction" priority="9" />
+      <Item value="CommitTransaction" priority="9" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Web.Controllers.WishListController">
+      <Item value="ClosetId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Web.Controllers.MVCInteraction.WishListSelection">
+      <Item value="GarmentId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.FashionFlavor">
+      <Item value="Id" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.ApplicationServices.IOutfitEngineService">
+      <Item value="HasValidCombinations" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@NUnit.Framework.Assert">
+      <Item value="IsFalse" priority="0" />
+      <Item value="Greater" priority="1" />
+      <Item value="Equals" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.Clothing.Garment">
+      <Item value="Id" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Substring" priority="0" />
+      <Item value="Length" priority="1" />
+      <Item value="ToString" priority="0" />
+      <Item value="ToLower" priority="7" />
+      <Item value="Split" priority="0" />
+      <Item value="Contains" priority="2" />
+      <Item value="Equals" priority="1" />
+      <Item value="Remove" priority="0" />
+      <Item value="Replace" priority="0" />
+      <Item value="ToUpper" priority="0" />
+      <Item value="StartsWith" priority="0" />
+      <Item value="TrimEnd" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.DataInterfaces.IUserGarmentRepository">
+      <Item value="DbContext" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.Clothing.UserGarment">
+      <Item value="Id" priority="0" />
+      <Item value="Title" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.UrlHelper">
+      <Item value="RouteUrl" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.ThirdParties.OUImportation">
+      <Item value="Lines" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.ThirdParties.OUImportationLine">
+      <Item value="ProgramName" priority="0" />
+      <Item value="ProgramUrl" priority="0" />
+      <Item value="CatalogName" priority="0" />
+      <Item value="LastUpdated" priority="1" />
+      <Item value="Name" priority="0" />
+      <Item value="Keywords" priority="0" />
+      <Item value="Description" priority="0" />
+      <Item value="Sku" priority="0" />
+      <Item value="Manufacturer" priority="0" />
+      <Item value="ManufacturerId" priority="0" />
+      <Item value="Upc" priority="0" />
+      <Item value="Isbn" priority="0" />
+      <Item value="Currency" priority="0" />
+      <Item value="SalePrice" priority="0" />
+      <Item value="Price" priority="0" />
+      <Item value="RetailPrice" priority="0" />
+      <Item value="FromPrice" priority="0" />
+      <Item value="BuyUrl" priority="0" />
+      <Item value="ImpressionUrl" priority="0" />
+      <Item value="ImageUrl" priority="0" />
+      <Item value="AdvertiserCategory" priority="0" />
+      <Item value="ThirdPartyId" priority="0" />
+      <Item value="ThirdPartyCategory" priority="0" />
+      <Item value="Author" priority="0" />
+      <Item value="Artist" priority="0" />
+      <Item value="Title" priority="0" />
+      <Item value="Publisher" priority="0" />
+      <Item value="Label" priority="0" />
+      <Item value="Format" priority="0" />
+      <Item value="Special" priority="0" />
+      <Item value="PromotionalText" priority="0" />
+      <Item value="StartDate" priority="0" />
+      <Item value="EndDate" priority="0" />
+      <Item value="OffLine" priority="0" />
+      <Item value="OnLine" priority="0" />
+      <Item value="InStock" priority="0" />
+      <Item value="Condition" priority="0" />
+      <Item value="Warranty" priority="0" />
+      <Item value="StandardShippingCost" priority="0" />
+      <Item value="Gift" priority="0" />
+      <Item value="OriginalLine" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToDateTime" priority="6" />
+      <Item value="ToDecimal" priority="6" />
+      <Item value="ToDouble" priority="0" />
+      <Item value="ToInt64" priority="3" />
+      <Item value="ToSingle" priority="0" />
+      <Item value="ToInt32" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.OutfitUpdaterImportation.Core.OUImportationLine">
+      <Item value="ProgramName" priority="2" />
+      <Item value="ProgramUrl" priority="1" />
+      <Item value="Importation" priority="0" />
+      <Item value="ThirdPartyId" priority="1" />
+      <Item value="Description" priority="3" />
+      <Item value="Price" priority="2" />
+      <Item value="BuyUrl" priority="1" />
+      <Item value="ImageUrl" priority="1" />
+      <Item value="Title" priority="0" />
+      <Item value="Keywords" priority="7" />
+      <Item value="Detail" priority="0" />
+      <Item value="Sku" priority="8" />
+      <Item value="Name" priority="3" />
+      <Item value="SalePrice" priority="0" />
+      <Item value="Trends" priority="3" />
+      <Item value="Silouhette" priority="4" />
+      <Item value="Pattern" priority="3" />
+      <Item value="ColorFamily" priority="3" />
+      <Item value="Status" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.Path">
+      <Item value="GetPathRoot" priority="0" />
+      <Item value="GetFullPath" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.OutfitUpdaterImportation.Controllers.OUImportationController">
+      <Item value="Create" priority="0" />
+      <Item value="AsyncCreate" priority="0" />
+      <Item value="Filename" priority="0" />
+      <Item value="Separator" priority="0" />
+      <Item value="Path" priority="0" />
+      <Item value="Sync" priority="2" />
+      <Item value="Process" priority="0" />
+      <Item value="HaveHeader" priority="1" />
+      <Item value="MemorySafe" priority="0" />
+      <Item value="outfitUpdaterRepository" priority="0" />
+      <Item value="ouimportationClassBuilder" priority="0" />
+      <Item value="trendRepository" priority="0" />
+      <Item value="Partner" priority="0" />
+      <Item value="silouhetteRepository" priority="0" />
+      <Item value="patternRepository" priority="0" />
+      <Item value="colorFamilyRepository" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FileHelpers.RunTime.DelimitedClassBuilder">
+      <Item value="LastField" priority="2" />
+      <Item value="Fields" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FileHelpers.RunTime.DelimitedFieldBuilder">
+      <Item value="FieldType" priority="0" />
+      <Item value="Converter" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.OutfitUpdaterImportation.Core.OUImportation">
+      <Item value="Lines" priority="0" />
+      <Item value="Id" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.TimeSpan">
+      <Item value="Seconds" priority="1" />
+      <Item value="TotalSeconds" priority="0" />
+      <Item value="TotalMinutes" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="ToShortTimeString" priority="1" />
+      <Item value="ToLongTimeString" priority="3" />
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FileHelpers.FileHelperAsyncEngine">
+      <Item value="LastRecord" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Exception">
+      <Item value="Message" priority="1" />
+      <Item value="InnerException" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString" priority="4" />
+      <Item value="Equals" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Single">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.VisualBasic.Devices.ComputerInfo">
+      <Item value="TotalPhysicalMemory" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.GC">
+      <Item value="Collect" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@FashionAde.OutfitUpdaterImportation.Resources.Resource">
+      <Item value="ResourceManager" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int64">
+      <Item value="Equals" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Double">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.HashSet`1">
+      <Item value="Count" priority="1" />
+      <Item value="Add" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.DataInterfaces.IOutfitUpdaterRepository">
+      <Item value="GetAll" priority="2" />
+      <Item value="SaveOrUpdate" priority="1" />
+      <Item value="DbContext" priority="2" />
+      <Item value="GetFirsts" priority="0" />
+      <Item value="GetValids" priority="1" />
+      <Item value="ProcessOutfitUpdatersByProCombinationsFile" priority="1" />
+      <Item value="GetValidsAndProcessed" priority="0" />
+      <Item value="ChangeOutfitUpdatersStatus" priority="0" />
+      <Item value="GetFor" priority="0" />
+      <Item value="GetRandomOutfitUpdaterFor" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.ThirdParties.OutfitUpdater">
+      <Item value="ExternalId" priority="3" />
+      <Item value="BuyUrl" priority="1" />
+      <Item value="Description" priority="0" />
+      <Item value="ImageUrl" priority="3" />
+      <Item value="Keywords" priority="0" />
+      <Item value="Name" priority="3" />
+      <Item value="Partner" priority="0" />
+      <Item value="PartnerUrl" priority="0" />
+      <Item value="Price" priority="1" />
+      <Item value="SalePrice" priority="0" />
+      <Item value="ThirdPartyId" priority="0" />
+      <Item value="Trends" priority="0" />
+      <Item value="Silouhette" priority="5" />
+      <Item value="Pattern" priority="6" />
+      <Item value="ColorFamily" priority="3" />
+      <Item value="Status" priority="1" />
+      <Item value="Id" priority="2" />
+      <Item value="name" priority="0" />
+      <Item value="description" priority="0" />
+      <Item value="keywords" priority="0" />
+      <Item value="externalId" priority="0" />
+      <Item value="price" priority="0" />
+      <Item value="buyUrl" priority="0" />
+      <Item value="imageUrl" priority="0" />
+      <Item value="silouhette" priority="0" />
+      <Item value="pattern" priority="0" />
+      <Item value="colorFamily" priority="0" />
+      <Item value="status" priority="0" />
+      <Item value="partner" priority="0" />
+      <Item value="PreCombinations" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.DataInterfaces.ITrendRepository">
+      <Item value="GetAll" priority="0" />
+      <Item value="Testing" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.Trends.Trend">
+      <Item value="Keywords" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="Write" priority="2" />
+      <Item value="WriteLine" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentNHibernate.Mapping.ManyToManyPart`1">
+      <Item value="Cascade" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NHibernate.ISession">
+      <Item value="CreateCriteria" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.ThirdParties.Partner">
+      <Item value="Id" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.DataInterfaces.IPartnerRepository">
+      <Item value="SaveOrUpdate" priority="0" />
+      <Item value="DbContext" priority="0" />
+      <Item value="GetByCode" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.Clothing.ColorFamily">
+      <Item value="Id" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.OutfitEngine.PreCombination">
+      <Item value="FashionFlavor" priority="0" />
+      <Item value="Id" priority="3" />
+      <Item value="Garment3" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@FashionAde.Core.ThirdParties.OutfitUpdaterStatus">
+      <Item value="New" priority="1" />
+      <Item value="Valid" priority="3" />
+      <Item value="Incomplete" priority="0" />
+      <Item value="Processed" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.Clothing.PreSilouhette">
+      <Item value="ShapeType" priority="0" />
+      <Item value="Layer" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.ThirdParties.OutfitUpdaterByPreCombination">
+      <Item value="outfitUpdater" priority="0" />
+      <Item value="preCombination" priority="0" />
+      <Item value="OutfitUpdater" priority="1" />
+      <Item value="PreCombination" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.ApplicationServices.OutfitEngineProcessor">
+      <Item value="GetOutfitUpdatersByPreCombinations" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.DataInterfaces.IPreCombinationRepository">
+      <Item value="GetFirsts" priority="0" />
+      <Item value="GetAll" priority="0" />
+      <Item value="GetNews" priority="2" />
+      <Item value="GetOnly" priority="0" />
+      <Item value="ChangePreCombinationsStatus" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.OutfitEngine.PreGarment">
+      <Item value="PreSilouhette" priority="0" />
+      <Item value="Silouhette" priority="2" />
+      <Item value="Id" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.Clothing.Silouhette">
+      <Item value="Structure" priority="1" />
+      <Item value="Shape" priority="1" />
+      <Item value="Layers" priority="2" />
+      <Item value="Description" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.Clothing.Structure">
+      <Item value="Type" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.Clothing.Shape">
+      <Item value="Type" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@FashionAde.Core.Clothing.LayerCode">
+      <Item value="ACC1" priority="0" />
+      <Item value="ACC3" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@FashionAde.Core.OutfitEngine.PreCombinationStatus">
+      <Item value="New" priority="2" />
+      <Item value="Processed" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.DataInterfaces.ISilouhetteRepository">
+      <Item value="GetAll" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.DataInterfaces.IPatternRepository">
+      <Item value="GetAll" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.DataInterfaces.IColorFamilyRepository">
+      <Item value="GetAll" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.DataInterfaces.IOutfitUpdaterByPreCombinationRepository">
+      <Item value="DbContext" priority="2" />
+      <Item value="SaveOrUpdate" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.MvcHtmlString">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Web.Controllers.MVCInteraction.HomeRegisteredUserInfo">
+      <Item value="TopRatedOutfits" priority="1" />
+      <Item value="RecentlyUploadedGarments" priority="1" />
+      <Item value="FashionFlavors" priority="2" />
+      <Item value="StyleAlerts" priority="1" />
+      <Item value="UserName" priority="0" />
+      <Item value="HaveBeenRated" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.DataInterfaces.IClosetOutfitRepository">
+      <Item value="HaveBeenRated" priority="0" />
+      <Item value="Get" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Services.OutfitEngineProcessor">
+      <Item value="SaveOutfitUpdatersByPreCombinationsToFile" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Web.Controllers.MVCInteraction.UserAnswer">
+      <Item value="SecurityQuestion" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@NHibernate.FetchMode">
+      <Item value="Join" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.MVCInteraction.ClosetOutfitView">
+      <Item value="OutfitUpdater" priority="6" />
+      <Item value="PreCombination" priority="1" />
+      <Item value="ClosetOutfit" priority="4" />
+      <Item value="shortEventTypes" priority="0" />
+      <Item value="eventTypes" priority="0" />
+      <Item value="ShortEventTypes" priority="2" />
+      <Item value="EventTypes" priority="0" />
+      <Item value="Id" priority="1" />
+      <Item value="ShowAddToMyCloset" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Services.OutfitUpdaterService">
+      <Item value="outfitUpdaterRepository" priority="0" />
+      <Item value="styleRuleRepository" priority="0" />
+      <Item value="closetRepository" priority="0" />
+      <Item value="preCombinationRepository" priority="1" />
+      <Item value="GetOutfitUpdatersByPreCombinations" priority="0" />
+      <Item value="silouhetteRepository" priority="0" />
+      <Item value="patternRepository" priority="0" />
+      <Item value="colorFamilyRepository" priority="0" />
+      <Item value="trendRepository" priority="0" />
+      <Item value="UpdateFeeds" priority="0" />
+      <Item value="partnerRepository" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Web.Controllers.OutfitCreationController">
+      <Item value="outfitUpdaterService" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Utils.OutfitUpdaters.IOutfitUpdaterService">
+      <Item value="MatchOutfitUpdaters" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.UserCloset.FriendRatingInvitation">
+      <Item value="Rate" priority="0" />
+      <Item value="KeyCode" priority="0" />
+      <Item value="User" priority="0" />
+      <Item value="Outfit" priority="0" />
+      <Item value="Message" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Math">
+      <Item value="Ceiling" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.DataInterfaces.IFriendRatingInvitationRepository">
+      <Item value="DbContext" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Web.Controllers.MVCInteraction.SilouhetteSelection">
+      <Item value="Success" priority="0" />
+      <Item value="Patterns" priority="0" />
+      <Item value="Fabrics" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Web.Controllers.ContactUsController">
+      <Item value="contentService" priority="0" />
+      <Item value="messageSenderService" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Mvc.HttpVerbs">
+      <Item value="Post" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Web.Controllers.MVCInteraction.FeedBack">
+      <Item value="Name" priority="1" />
+      <Item value="Content" priority="1" />
+      <Item value="Message" priority="1" />
+      <Item value="Email" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Configuration.ConfigurationManager">
+      <Item value="AppSettings" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Web.Controllers.MyOutfitsController">
+      <Item value="outfitUpdaterRepository" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Web.Controllers.OutfitUpdatersController">
+      <Item value="outfitUpdaterRepository" priority="0" />
+      <Item value="contentService" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@NHibernate.Criterion.Projections">
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Security.Membership">
+      <Item value="GetUser" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Web.Controllers.AccountController">
+      <Item value="registerMemberService" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Security.Roles">
+      <Item value="GetUsersInRole" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Web.Controllers.MVCInteraction.OutfitResume">
+      <Item value="OutfitView" priority="7" />
+      <Item value="UserClosetUrl" priority="1" />
+      <Item value="OutfitUserName" priority="1" />
+      <Item value="ratings" priority="3" />
+      <Item value="totalFriendRatings" priority="0" />
+      <Item value="comments" priority="0" />
+      <Item value="TotalFriendRatings" priority="0" />
+      <Item value="Ratings" priority="1" />
+      <Item value="AddFriendRatings" priority="0" />
+      <Item value="outfitView" priority="0" />
+      <Item value="userClosetUrl" priority="0" />
+      <Item value="GetRatings" priority="0" />
+      <Item value="showRatings" priority="0" />
+      <Item value="ShowRatings" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Web.Controllers.MVCInteraction.OutfitResumeFriendComments">
+      <Item value="name" priority="0" />
+      <Item value="comment" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Web.Controllers.MVCInteraction.OutfitResumeFriendRating">
+      <Item value="rating" priority="0" />
+      <Item value="count" priority="0" />
+      <Item value="Count" priority="1" />
+      <Item value="Rating" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.ClosetOutfit">
+      <Item value="Rating" priority="0" />
+      <Item value="User" priority="1" />
+      <Item value="Closet" priority="5" />
+      <Item value="Visibility" priority="0" />
+      <Item value="closet" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.Rating">
+      <Item value="FriendRatings" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.FriendRating">
+      <Item value="RatingValue" priority="0" />
+      <Item value="Friend" priority="2" />
+      <Item value="Observations" priority="2" />
+      <Item value="from" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.Accounts.InvitedUser">
+      <Item value="FullName" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Data.Repository.OutfitUpdaterRepository">
+      <Item value="Get" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.Clothing.Color">
+      <Item value="Description" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.Clothing.Fabric">
+      <Item value="Description" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.Clothing.Pattern">
+      <Item value="Description" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Data.Repository.EventTypeRepository">
+      <Item value="GetByIds" priority="0" />
+      <Item value="GetByCode" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.EventType">
+      <Item value="ShortName" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Web.Controllers.RatingController">
+      <Item value="registeredUserRepository" priority="0" />
+      <Item value="outfitUpdaterRepository" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.DataInterfaces.IRegisteredUserRepository">
+      <Item value="GetByMembershipId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@FashionAde.Core.ClosetStatus">
+      <Item value="FavoriteOutfit" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@FashionAde.Core.Accounts.PrivacyLevel">
+      <Item value="FavoriteOutfit" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Web.Controllers.MVCInteraction.OutfitView">
+      <Item value="ShowAsPublicCloset" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.Accounts.BasicUser">
+      <Item value="Id" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Web.Controllers.MVCInteraction.UserFull">
+      <Item value="Alert" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ModelStateDictionary">
+      <Item value="AddModelError" priority="2" />
+      <Item value="IsValid" priority="0" />
+      <Item value="Values" priority="1" />
+      <Item value="Keys" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.ApplicationServices.IContentService">
+      <Item value="GetRandomStyleAlerts" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Web.Controllers.MVCInteraction.UserRegistration">
+      <Item value="EmailConfirmation" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Utils.Validators.EmailMatchAttribute">
+      <Item value="IsValid" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ModelState">
+      <Item value="Value" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ValueProviderResult">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ModelError">
+      <Item value="ErrorMessage" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.ClosetGarment">
+      <Item value="Id" priority="0" />
+      <Item value="GetType" priority="0" />
+      <Item value="Garment" priority="2" />
+      <Item value="Details" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FashionAde.Core.GarmentDetails">
+      <Item value="PurchasedOn" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentNHibernate.Automapping.AutoMapping`1">
+      <Item value="Component" priority="0" />
+      <Item value="HibernateMapping" priority="0" />
+      <Item value="Map" priority="1" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/f:OutfitCreationController.cs" caret="2549" fromTop="16" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/d:MVCInteraction/f:UserRegistration.cs" caret="1955" fromTop="12" />
+      <File id="06B4EBD9-5FFE-451F-8022-D84868B470E1/f:Validators.cs" caret="2712" fromTop="24" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/f:GarmentSelectorController.cs" caret="0" fromTop="0" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/d:BuildYourCloset/f:RegistrationController.cs" caret="6066" fromTop="12" />
+      <File id="26375851-E958-47FE-B328-B7CF26DFD684/d:UserCloset/f:Closet.cs" caret="3886" fromTop="10" />
+      <File id="4ADD3200-7AA6-4D85-A02A-2D22D839B42F/d:Repository/f:ClosetRepository.cs" caret="4098" fromTop="14" />
+      <File id="C3377EC9-8721-4C15-95AF-B974D36873B2/d:Views/d:Rating/f:Thanks.aspx" caret="0" fromTop="0" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/f:MyGarmentsController.cs" caret="5131" fromTop="11" />
+      <File id="C3377EC9-8721-4C15-95AF-B974D36873B2/d:Views/d:Rating/f:Index.aspx" caret="421" fromTop="5" />
+      <File id="C3377EC9-8721-4C15-95AF-B974D36873B2/d:Views/d:Rating/f:FriendRate.ascx" caret="2158" fromTop="28" />
+      <File id="26375851-E958-47FE-B328-B7CF26DFD684/d:UserCloset/f:GarmentDetails.cs" caret="571" fromTop="2" />
+      <File id="26375851-E958-47FE-B328-B7CF26DFD684/d:UserCloset/f:ClosetGarment.cs" caret="236" fromTop="9" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/f:MyGarmentsDetailController.cs" caret="3324" fromTop="34" />
+      <File id="26375851-E958-47FE-B328-B7CF26DFD684/d:DataInterfaces/f:IClosetOutfitRepository.cs" caret="579" fromTop="16" />
+      <File id="4ADD3200-7AA6-4D85-A02A-2D22D839B42F/d:NHibernateMaps/f:SpecialMapping.cs" caret="1052" fromTop="4" />
+      <File id="26375851-E958-47FE-B328-B7CF26DFD684/d:UserCloset/f:FriendRatingInvitation.cs" caret="257" fromTop="10" />
+      <File id="26375851-E958-47FE-B328-B7CF26DFD684/d:UserCloset/f:Rating.cs" caret="3408" fromTop="20" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/f:AccountController.cs" caret="2519" fromTop="8" />
+      <File id="d:FashionAde.Scripts/d:01.DEV/f:New update for security question.sql" caret="0" fromTop="0" />
+      <File id="C3377EC9-8721-4C15-95AF-B974D36873B2/f:Web.config" caret="3828" fromTop="35" />
+      <File id="C3377EC9-8721-4C15-95AF-B974D36873B2/d:Views/d:Shared/f:Outfit.ascx" caret="947" fromTop="13" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/f:HomeController.cs" caret="1634" fromTop="13" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/f:OtherOutfitsController.cs" caret="0" fromTop="0" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/f:RatingController.cs" caret="2153" fromTop="17" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/d:Base/f:Common.cs" caret="3232" fromTop="2" />
+      <File id="4ADD3200-7AA6-4D85-A02A-2D22D839B42F/d:Repository/f:ClosetOutfitRepository.cs" caret="2986" fromTop="12" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/f:MyOutfitsController.cs" caret="3616" fromTop="0" />
+      <File id="C3377EC9-8721-4C15-95AF-B974D36873B2/d:Views/d:Registration/f:Index.aspx" caret="1027" fromTop="16" />
+      <File id="C3377EC9-8721-4C15-95AF-B974D36873B2/f:NHibernate.config" caret="212" fromTop="3" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="26375851-E958-47FE-B328-B7CF26DFD684/d:UserCloset/f:GarmentDetails.cs" caret="571" fromTop="21" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/f:MyGarmentsDetailController.cs" caret="1752" fromTop="23" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/f:MyGarmentsDetailController.cs" caret="1591" fromTop="21" />
+      <File id="4ADD3200-7AA6-4D85-A02A-2D22D839B42F/d:NHibernateMaps/f:SpecialMapping.cs" caret="14878" fromTop="16" />
+      <File id="4ADD3200-7AA6-4D85-A02A-2D22D839B42F/d:NHibernateMaps/f:SpecialMapping.cs" caret="7754" fromTop="98" />
+      <File id="d:FashionAde.Scripts/d:01.DEV/f:New update for security question.sql" caret="0" fromTop="0" />
+      <File id="4ADD3200-7AA6-4D85-A02A-2D22D839B42F/d:Repository/f:ClosetOutfitRepository.cs" caret="14245" fromTop="33" />
+      <File id="C3377EC9-8721-4C15-95AF-B974D36873B2/d:Views/d:Shared/f:Outfit.ascx" caret="13275" fromTop="23" />
+      <File id="C3377EC9-8721-4C15-95AF-B974D36873B2/d:Views/d:Shared/f:Outfit.ascx" caret="13275" fromTop="27" />
+      <File id="C3377EC9-8721-4C15-95AF-B974D36873B2/d:Views/d:Shared/f:Outfit.ascx" caret="13275" fromTop="6" />
+      <File id="26375851-E958-47FE-B328-B7CF26DFD684/d:UserCloset/f:Rating.cs" caret="3408" fromTop="20" />
+      <File id="d:FashionAde.Scripts/d:01.DEV/f:New update for security question.sql" caret="849" fromTop="8" />
+      <File id="d:FashionAde.Scripts/d:01.DEV/f:New update for security question.sql" caret="849" fromTop="8" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/f:AccountController.cs" caret="13275" fromTop="17" />
+      <File id="C3377EC9-8721-4C15-95AF-B974D36873B2/f:Web.config" caret="2915" fromTop="16" />
+      <File id="C3377EC9-8721-4C15-95AF-B974D36873B2/f:Web.config" caret="3829" fromTop="35" />
+      <File id="C3377EC9-8721-4C15-95AF-B974D36873B2/f:NHibernate.config" caret="236" fromTop="3" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/f:RatingController.cs" caret="2153" fromTop="17" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/d:Base/f:Common.cs" caret="3169" fromTop="35" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/d:Base/f:Common.cs" caret="3169" fromTop="17" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/d:Base/f:Common.cs" caret="3169" fromTop="23" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/f:RatingController.cs" caret="6940" fromTop="21" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/f:RatingController.cs" caret="2668" fromTop="14" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/f:MyOutfitsController.cs" caret="2966" fromTop="10" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/f:MyOutfitsController.cs" caret="3393" fromTop="24" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/f:MyOutfitsController.cs" caret="3355" fromTop="13" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/d:Base/f:Common.cs" caret="3169" fromTop="10" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/f:MyOutfitsController.cs" caret="5195" fromTop="12" />
+      <File id="1A214C0E-B4F6-4F91-9878-2BBC34341C66/f:MyOutfitsController.cs" caret="3616" fromTop="19" />
+      <File id="C3377EC9-8721-4C15-95AF-B974D36873B2/d:Views/d:Registration/f:Index.aspx" caret="1361" fromTop="18" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+</Configuration>

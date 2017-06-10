@@ -1,0 +1,1332 @@
+2010-06-23 16:22:03,341 Starting to update feeds
+
+2010-06-23 16:22:03,575 Starting to import
+
+2010-06-23 16:22:10,354 Match updaters
+
+2010-06-23 16:22:10,744 Found 1 valid outfit updaters to match.
+
+2010-06-23 16:22:10,744 Found 659 precombinations pending to be updated.
+
+2010-06-23 16:22:10,775 Matching PrecombinationId : 1
+
+2010-06-23 16:22:10,900 Matching PrecombinationId : 2
+
+2010-06-23 16:22:10,900 Matching PrecombinationId : 3
+
+2010-06-23 16:22:10,900 Matching PrecombinationId : 4
+
+2010-06-23 16:22:10,916 Matching PrecombinationId : 5
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 6
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 7
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 8
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 9
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 10
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 11
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 12
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 13
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 14
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 15
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 16
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 17
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 18
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 19
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 20
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 21
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 22
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 23
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 24
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 25
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 26
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 27
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 28
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 29
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 30
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 31
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 32
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 33
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 34
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 35
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 36
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 37
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 38
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 39
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 40
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 41
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 42
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 43
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 44
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 45
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 46
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 47
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 48
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 49
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 50
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 51
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 52
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 53
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 54
+
+2010-06-23 16:22:10,931 Matching PrecombinationId : 55
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 56
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 57
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 58
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 59
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 60
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 61
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 62
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 63
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 64
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 65
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 66
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 67
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 68
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 69
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 70
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 71
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 72
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 73
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 74
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 75
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 76
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 77
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 78
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 79
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 80
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 81
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 82
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 83
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 130
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 131
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 132
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 133
+
+2010-06-23 16:22:10,947 Matching PrecombinationId : 134
+
+2010-06-23 16:22:10,962 Matching PrecombinationId : 135
+
+2010-06-23 16:22:10,962 Matching PrecombinationId : 136
+
+2010-06-23 16:22:10,962 Matching PrecombinationId : 137
+
+2010-06-23 16:22:10,962 Matching PrecombinationId : 138
+
+2010-06-23 16:22:10,962 Matching PrecombinationId : 139
+
+2010-06-23 16:22:10,962 Matching PrecombinationId : 140
+
+2010-06-23 16:22:10,962 Matching PrecombinationId : 141
+
+2010-06-23 16:22:10,962 Matching PrecombinationId : 142
+
+2010-06-23 16:22:10,962 Matching PrecombinationId : 143
+
+2010-06-23 16:22:10,962 Matching PrecombinationId : 144
+
+2010-06-23 16:22:10,962 Matching PrecombinationId : 145
+
+2010-06-23 16:22:10,962 Matching PrecombinationId : 146
+
+2010-06-23 16:22:10,962 Matching PrecombinationId : 147
+
+2010-06-23 16:22:10,962 Matching PrecombinationId : 148
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 149
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 150
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 151
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 152
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 153
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 154
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 155
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 156
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 157
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 158
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 159
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 160
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 161
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 162
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 163
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 164
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 165
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 166
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 167
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 168
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 169
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 170
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 171
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 172
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 173
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 174
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 175
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 176
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 177
+
+2010-06-23 16:22:10,978 Matching PrecombinationId : 178
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 179
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 180
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 181
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 182
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 183
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 184
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 185
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 186
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 187
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 188
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 189
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 190
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 191
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 192
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 193
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 194
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 195
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 196
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 197
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 198
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 199
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 200
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 201
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 202
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 203
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 204
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 205
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 206
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 207
+
+2010-06-23 16:22:10,994 Matching PrecombinationId : 208
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 209
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 210
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 211
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 212
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 213
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 214
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 215
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 216
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 217
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 218
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 219
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 220
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 221
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 222
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 223
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 224
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 225
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 226
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 227
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 228
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 229
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 230
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 231
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 232
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 233
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 234
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 235
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 236
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 237
+
+2010-06-23 16:22:11,009 Matching PrecombinationId : 258
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 259
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 260
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 261
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 262
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 263
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 264
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 265
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 266
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 267
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 268
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 269
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 270
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 271
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 272
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 273
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 274
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 275
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 276
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 277
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 278
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 279
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 280
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 281
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 282
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 283
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 284
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 285
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 286
+
+2010-06-23 16:22:11,025 Matching PrecombinationId : 287
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 288
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 289
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 290
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 291
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 292
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 293
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 294
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 295
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 296
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 297
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 298
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 299
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 300
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 301
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 302
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 303
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 304
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 305
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 306
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 307
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 308
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 309
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 310
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 311
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 312
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 313
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 314
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 315
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 316
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 317
+
+2010-06-23 16:22:11,040 Matching PrecombinationId : 318
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 319
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 320
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 321
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 322
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 323
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 324
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 325
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 326
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 327
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 328
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 329
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 330
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 331
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 332
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 333
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 334
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 335
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 336
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 337
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 338
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 339
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 340
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 341
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 342
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 343
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 344
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 345
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 346
+
+2010-06-23 16:22:11,056 Matching PrecombinationId : 347
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 348
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 349
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 350
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 351
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 352
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 353
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 354
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 355
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 356
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 357
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 358
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 359
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 360
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 361
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 362
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 363
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 364
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 365
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 366
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 367
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 368
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 369
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 370
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 371
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 372
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 373
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 374
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 375
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 376
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 377
+
+2010-06-23 16:22:11,071 Matching PrecombinationId : 378
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 379
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 380
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 381
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 382
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 383
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 384
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 385
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 386
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 387
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 388
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 389
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 390
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 391
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 392
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 393
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 394
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 395
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 396
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 397
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 398
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 399
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 400
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 401
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 402
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 403
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 404
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 405
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 406
+
+2010-06-23 16:22:11,087 Matching PrecombinationId : 407
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 408
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 409
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 410
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 411
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 412
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 413
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 414
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 415
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 416
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 417
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 418
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 419
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 420
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 421
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 422
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 423
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 424
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 425
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 426
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 427
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 428
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 429
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 430
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 431
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 432
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 433
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 434
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 435
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 436
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 437
+
+2010-06-23 16:22:11,103 Matching PrecombinationId : 438
+
+2010-06-23 16:22:11,118 Matching PrecombinationId : 439
+
+2010-06-23 16:22:11,118 Matching PrecombinationId : 440
+
+2010-06-23 16:22:11,118 Matching PrecombinationId : 441
+
+2010-06-23 16:22:11,118 Matching PrecombinationId : 442
+
+2010-06-23 16:22:11,118 Matching PrecombinationId : 443
+
+2010-06-23 16:22:11,118 Matching PrecombinationId : 444
+
+2010-06-23 16:22:11,118 Matching PrecombinationId : 445
+
+2010-06-23 16:22:11,118 Matching PrecombinationId : 446
+
+2010-06-23 16:22:11,118 Matching PrecombinationId : 447
+
+2010-06-23 16:22:11,118 Matching PrecombinationId : 448
+
+2010-06-23 16:22:11,118 Matching PrecombinationId : 449
+
+2010-06-23 16:22:11,118 Matching PrecombinationId : 450
+
+2010-06-23 16:22:11,118 Matching PrecombinationId : 451
+
+2010-06-23 16:22:11,118 Matching PrecombinationId : 452
+
+2010-06-23 16:22:11,118 Matching PrecombinationId : 453
+
+2010-06-23 16:22:11,118 Matching PrecombinationId : 454
+
+2010-06-23 16:22:11,118 Matching PrecombinationId : 455
+
+2010-06-23 16:22:11,134 Matching PrecombinationId : 456
+
+2010-06-23 16:22:11,134 Matching PrecombinationId : 457
+
+2010-06-23 16:22:11,134 Matching PrecombinationId : 458
+
+2010-06-23 16:22:11,134 Matching PrecombinationId : 459
+
+2010-06-23 16:22:11,134 Matching PrecombinationId : 460
+
+2010-06-23 16:22:11,134 Matching PrecombinationId : 461
+
+2010-06-23 16:22:11,134 Matching PrecombinationId : 462
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 463
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 464
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 465
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 466
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 467
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 540
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 541
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 542
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 543
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 544
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 545
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 546
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 547
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 548
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 549
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 550
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 551
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 552
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 553
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 554
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 555
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 556
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 557
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 558
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 559
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 560
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 561
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 562
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 563
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 564
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 565
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 566
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 567
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 568
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 569
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 570
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 571
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 572
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 573
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 574
+
+2010-06-23 16:22:11,149 Matching PrecombinationId : 575
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 576
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 577
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 578
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 579
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 580
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 581
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 582
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 583
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 584
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 585
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 586
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 587
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 588
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 589
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 590
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 591
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 604
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 605
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 606
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 607
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 608
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 609
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 610
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 611
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 612
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 613
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 614
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 615
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 616
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 617
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 618
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 619
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 620
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 621
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 622
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 623
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 624
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 625
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 626
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 627
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 628
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 629
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 630
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 631
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 632
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 633
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 634
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 635
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 636
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 637
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 638
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 639
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 640
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 641
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 642
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 643
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 644
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 645
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 646
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 647
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 648
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 649
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 650
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 651
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 652
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 653
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 654
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 655
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 656
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 657
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 658
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 659
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 660
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 661
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 662
+
+2010-06-23 16:22:11,165 Matching PrecombinationId : 663
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 664
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 665
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 666
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 667
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 668
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 669
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 670
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 671
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 672
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 673
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 674
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 675
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 676
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 677
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 678
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 679
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 680
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 681
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 682
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 683
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 684
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 685
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 686
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 687
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 688
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 689
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 690
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 691
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 692
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 693
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 694
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 695
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 696
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 697
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 698
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 699
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 700
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 701
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 702
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 703
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 704
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 705
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 706
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 707
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 708
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 709
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 710
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 711
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 712
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 713
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 714
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 715
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 716
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 717
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 718
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 719
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 720
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 721
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 722
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 723
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 724
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 725
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 726
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 727
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 728
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 729
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 730
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 731
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 732
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 733
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 734
+
+2010-06-23 16:22:11,181 Matching PrecombinationId : 735
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 736
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 737
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 738
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 739
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 740
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 741
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 742
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 743
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 744
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 745
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 746
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 747
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 748
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 749
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 750
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 751
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 752
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 753
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 754
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 755
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 756
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 757
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 758
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 759
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 760
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 761
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 762
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 763
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 764
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 765
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 766
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 767
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 768
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 769
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 770
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 771
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 772
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 773
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 774
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 775
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 776
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 777
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 862
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 863
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 870
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 871
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 872
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 873
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 874
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 875
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 876
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 877
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 878
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 879
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 880
+
+2010-06-23 16:22:11,196 Matching PrecombinationId : 881
+
+2010-06-23 16:22:11,212 Matching PrecombinationId : 882
+
+2010-06-23 16:22:11,212 Matching PrecombinationId : 883
+
+2010-06-23 16:22:11,212 Matching PrecombinationId : 884
+
+2010-06-23 16:22:11,212 Matching PrecombinationId : 885
+
+2010-06-23 16:22:11,212 Matching PrecombinationId : 886
+
+2010-06-23 16:22:11,212 Matching PrecombinationId : 890
+
+2010-06-23 16:22:11,212 Matching PrecombinationId : 891
+
+2010-06-23 16:22:11,212 Matching PrecombinationId : 892
+
+2010-06-23 16:22:11,212 Matching PrecombinationId : 893
+
+2010-06-23 16:22:11,212 Matching PrecombinationId : 915
+
+2010-06-23 16:22:11,212 Matching PrecombinationId : 916
+
+2010-06-23 16:22:11,212 Matching PrecombinationId : 917
+
+2010-06-23 16:22:11,212 Matching PrecombinationId : 978
+
+2010-06-23 16:22:11,212 Matching PrecombinationId : 979
+
+2010-06-23 16:22:11,212 Matching PrecombinationId : 980
+
+2010-06-23 16:22:11,212 Matching PrecombinationId : 981
+
+2010-06-23 16:22:11,212 Matching PrecombinationId : 982
+
+2010-06-23 16:22:11,212 Matching PrecombinationId : 983
+
+2010-06-23 16:22:11,212 Found 0 matches to be created.
+
+2010-06-23 16:22:11,352 0 matches created.
+

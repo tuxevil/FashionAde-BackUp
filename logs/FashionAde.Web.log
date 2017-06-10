@@ -1,0 +1,16 @@
+2010-06-30 18:11:26,536 [14] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT this_.SecurityQuestionId as Security1_24_0_, this_.Description as Descript2_24_0_, this_.Helper as Helper24_0_ FROM SecurityQuestions this_
+
+2010-06-30 18:11:26,630 [14] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT this_.UserSizeId as UserSizeId35_0_, this_.Description as Descript2_35_0_ FROM UserSizes this_
+
+2010-06-30 18:11:44,346 [9] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT this_.SecurityQuestionId as Security1_24_0_, this_.Description as Descript2_24_0_, this_.Helper as Helper24_0_ FROM SecurityQuestions this_
+
+2010-06-30 18:11:44,377 [9] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT this_.UserSizeId as UserSizeId35_0_, this_.Description as Descript2_35_0_ FROM UserSizes this_
+
+2010-06-30 18:12:02,187 [9] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT this_.SecurityQuestionId as Security1_24_0_, this_.Description as Descript2_24_0_, this_.Helper as Helper24_0_ FROM SecurityQuestions this_
+
+2010-06-30 18:12:02,265 [9] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT this_.UserSizeId as UserSizeId35_0_, this_.Description as Descript2_35_0_ FROM UserSizes this_
+
+2010-06-30 18:12:23,004 [9] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT this_.SecurityQuestionId as Security1_24_0_, this_.Description as Descript2_24_0_, this_.Helper as Helper24_0_ FROM SecurityQuestions this_
+
+2010-06-30 18:12:23,083 [9] NHibernate.AdoNet.Util.SqlStatementLogger.LogCommand(:0) - SELECT this_.UserSizeId as UserSizeId35_0_, this_.Description as Descript2_35_0_ FROM UserSizes this_
+

@@ -1,0 +1,18 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewPage<UserRegistration>" %>
+<%@ Import Namespace="FashionAde.Web.Controllers.MVCInteraction"%>
+
+<asp:Content ID="indexContent" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
+<center>
+<span>Thank you for your registration, <%= Model.UserName %></span>
+</center>
+<% Html.RenderPartial("LogIn"); %>
+</asp:Content>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ScriptsPlaceHolder" runat="server">
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#ctl00_MainContentPlaceHolder_ucLogin_UserName").text('<%= Model.UserName %>');
+        $("#ctl00_MainContentPlaceHolder_ucLogin_Password").focus();
+    });
+</script>
+</asp:Content>

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/nybble/!svn/ver/4663/FashionAde/trunk/app/FashionAde.Core/Clothing
+END
+GarmentTags.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/nybble/!svn/ver/4255/FashionAde/trunk/app/FashionAde.Core/Clothing/GarmentTags.cs
+END
+UserGarment.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/nybble/!svn/ver/4551/FashionAde/trunk/app/FashionAde.Core/Clothing/UserGarment.cs
+END
+PatternKeywordsByPartner.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/nybble/!svn/ver/4652/FashionAde/trunk/app/FashionAde.Core/Clothing/PatternKeywordsByPartner.cs
+END
+Garment.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/nybble/!svn/ver/4654/FashionAde/trunk/app/FashionAde.Core/Clothing/Garment.cs
+END
+Pattern.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/nybble/!svn/ver/4663/FashionAde/trunk/app/FashionAde.Core/Clothing/Pattern.cs
+END
+GarmentShape.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/nybble/!svn/ver/4255/FashionAde/trunk/app/FashionAde.Core/Clothing/GarmentShape.cs
+END
+ColorFamilyKeywordsByPartner.cs
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/nybble/!svn/ver/4652/FashionAde/trunk/app/FashionAde.Core/Clothing/ColorFamilyKeywordsByPartner.cs
+END
+ColorFamily.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/nybble/!svn/ver/4663/FashionAde/trunk/app/FashionAde.Core/Clothing/ColorFamily.cs
+END
+SilouhetteKeywordsByPartner.cs
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/nybble/!svn/ver/4652/FashionAde/trunk/app/FashionAde.Core/Clothing/SilouhetteKeywordsByPartner.cs
+END
+Silouhette.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/nybble/!svn/ver/4663/FashionAde/trunk/app/FashionAde.Core/Clothing/Silouhette.cs
+END

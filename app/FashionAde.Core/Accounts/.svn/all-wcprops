@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/nybble/!svn/ver/4824/FashionAde/trunk/app/FashionAde.Core/Accounts
+END
+RegisteredUser.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/nybble/!svn/ver/4824/FashionAde/trunk/app/FashionAde.Core/Accounts/RegisteredUser.cs
+END
+InvitationCode.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/nybble/!svn/ver/4297/FashionAde/trunk/app/FashionAde.Core/Accounts/InvitationCode.cs
+END
+BasicUser.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/nybble/!svn/ver/4394/FashionAde/trunk/app/FashionAde.Core/Accounts/BasicUser.cs
+END
+UserFlavor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/nybble/!svn/ver/4668/FashionAde/trunk/app/FashionAde.Core/Accounts/UserFlavor.cs
+END

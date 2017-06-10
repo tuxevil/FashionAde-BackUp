@@ -1,0 +1,10 @@
+﻿Comments:<br />
+$ConfirmRatingData.Comments$
+|
+<img src='$ConfirmRatingData.GarmentsUri$$ConfirmRatingData.Components[N].ImageUri$' alt='$ConfirmRatingData.Components[N].Title$' />
+|
+<br /><br />
+
+<img src='$ConfirmRatingData.RatingImg$' alt='$ConfirmRatingData.RatingText$' />
+<br /><br />
+$ConfirmRatingData.RatingText$<br /><br />

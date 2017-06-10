@@ -1,0 +1,332 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Web.Mvc;
+using FashionAde.Core;
+using FashionAde.Core.Accounts;
+using FashionAde.Core.Clothing;
+using FashionAde.Core.DataInterfaces;
+using FashionAde.Web.Controllers.MVCInteraction;
+using FashionAde.Web.Common;
+using SharpArch.Web.NHibernate;
+using System.Web.Security;
+
+namespace FashionAde.Web.Controllers
+{
+    [HandleError]
+    public class GarmentSelectorController : BaseController
+    {
+        private ISilouhetteRepository silouhetteRepository;
+        private IPatternRepository patternRepository;
+        private IFabricRepository fabricRepository;
+        private IGarmentRepository garmentRepository;
+        private IRegisteredUserRepository registeredUserRepository;
+        private IWishListRepository wishListRepository;
+        private IClosetRepository closetRepository;
+        private IFashionFlavorRepository fashionFlavorRepository;
+
+        public GarmentSelectorController(ISilouhetteRepository silouhetteRepository, IPatternRepository patternRepository, IFabricRepository fabricRepository, IGarmentRepository garmentRepository, IRegisteredUserRepository registeredUserRepository, IWishListRepository wishListRepository, IClosetRepository closetRepository, IFashionFlavorRepository fashionFlavorRepository)
+        {
+            this.silouhetteRepository = silouhetteRepository;
+            this.patternRepository = patternRepository;
+            this.garmentRepository = garmentRepository;
+            this.fabricRepository = fabricRepository;
+            this.registeredUserRepository = registeredUserRepository;
+            this.wishListRepository = wishListRepository;
+            this.closetRepository = closetRepository;
+            this.fashionFlavorRepository = fashionFlavorRepository;
+        }
+
+        [AcceptVerbs(HttpVerbs.Get)]
+        public ViewResult Index()
+        {
+            MembershipUser user = Membership.GetUser();
+            if(user == null)
+                return GarmentsListForNewUser();
+            return GarmentsListForExistingUser();
+        }
+
+        [AcceptVerbs(HttpVerbs.Get)]
+        public ViewResult Selector()
+        {
+            return View();
+        }
+
+        public ViewResult Index(GarmentsListData gld)
+        {
+            return GarmentsListForExistingUser();
+        }
+
+        private ViewResult GarmentsListForNewUser()
+        {
+            if (Session["FashionFlavorSelected"] == null)
+                Response.Redirect(Url.RouteUrl(new { controller = "FlavorSelect", action = "Index" }));
+
+            GarmentsListData gld = GetGarmentsListDataForNewUser();
+            return View(gld);
+        }
+
+        private GarmentsListData GetGarmentsListDataForNewUser()
+        {
+            GarmentsListData gld = new GarmentsListData();
+            gld.Controller = "GarmentSelector";
+            gld.Action = "GoToRegistration";
+            gld.FashionFlavors = (List<FashionFlavor>)Session["FashionFlavorSelected"];
+            gld.EventTypes = (List<EventType>)Session["EventTypeSelected"];
+
+            if (gld.FashionFlavors != null)
+            {
+                gld.Silouhettes = silouhetteRepository.GetByFlavors(gld.FashionFlavors, gld.EventTypes) as List<Silouhette>;
+                if (gld.Silouhettes != null)
+                {
+                    gld.Fabrics = fabricRepository.GetForSilouhette(gld.Silouhettes[0], gld.EventTypes);
+                    gld.FabricId = gld.Fabrics[0].Id;
+                    gld.SilouhetteId = gld.Silouhettes[0].Id;
+                    Pattern solid = patternRepository.GetSolid();
+                    gld.Garments = garmentRepository.GetBySelection(gld.Silouhettes[0], gld.Fabrics[0], solid, gld.EventTypes) as List<Garment>;
+                    gld.PatternId = solid.Id;
+                    gld.Patterns = patternRepository.GetAll();
+                }
+            }
+            return gld;
+        }
+
+        private ViewResult GarmentsListForExistingUser()
+        {
+            MembershipUser mu = Membership.GetUser();
+            RegisteredUser user = registeredUserRepository.GetByMembershipId(Convert.ToInt32(mu.ProviderUserKey));
+            GarmentsListData gld = new GarmentsListData();
+            foreach (UserFlavor userFlavor in user.UserFlavors)
+                gld.FashionFlavors.Add(userFlavor.Flavor);
+            GetGarmentsListData(user, gld);
+            return View(gld);
+        }
+
+        public ViewResult ChangeFlavor(string FashionFlavorAlternative, string NewGarmentsItems, string NewWishListItems)
+        {
+            MembershipUser mu = Membership.GetUser();
+            if(mu == null)
+                Response.Redirect(Url.RouteUrl(new { controller = "Login", action = "Index" }));
+            RegisteredUser user = registeredUserRepository.GetByMembershipId(Convert.ToInt32(mu.ProviderUserKey));
+            GarmentsListData gld = new GarmentsListData();
+            gld.FashionFlavors.Add(fashionFlavorRepository.Get(Convert.ToInt32(FashionFlavorAlternative)));
+            gld.NewGarmentsIds = NewGarmentsItems;
+            gld.NewWishGarmentsIds = NewWishListItems;
+            GetGarmentsListData(user, gld);
+            return View("Index", gld);
+        }
+
+        private void GetGarmentsListData(RegisteredUser user, GarmentsListData gld)
+        {
+            ViewData["UserName"] = User.Identity.Name;
+            gld.ForEdit = true;
+            gld.Controller = "GarmentSelector";
+            gld.Action = "GoToMyGarments";
+            gld.EventTypes = user.EventTypes;
+            foreach (ClosetGarment closetGarment in closetRepository.GetGarmentsForUser(user))
+            {
+                gld.MyGarmentsIds += closetGarment.Garment.Id + ",";
+                gld.MyGarments.Add(closetGarment);
+            }
+            if (!string.IsNullOrEmpty(gld.MyGarmentsIds))
+                gld.MyGarmentsIds = gld.MyGarmentsIds.Substring(0, gld.MyGarmentsIds.Length - 1);
+
+            WishList wl = wishListRepository.GetForUser(user);
+            if (wl != null)
+            {
+                foreach (WishGarment wishGarment in wl.Garments)
+                {
+                    gld.MyWishGarmentsIds += wishGarment.Garment.Id + ",";
+                    gld.MyWishGarments.Add(wishGarment);
+                }
+                if (gld.MyGarmentsIds.Length > 0)
+                    gld.MyGarmentsIds = gld.MyGarmentsIds.Substring(0, gld.MyGarmentsIds.Length - 1);
+            }
+
+            if(!string.IsNullOrEmpty(gld.NewGarmentsIds))
+            {
+                List<int> newGarmentsIds = new List<int>();
+                foreach (string id in gld.NewGarmentsIds.Split(','))
+                    if(!string.IsNullOrEmpty(id) && id != " ")
+                        newGarmentsIds.Add(Convert.ToInt32(id));
+                gld.NewGarments = garmentRepository.GetByIds(newGarmentsIds);
+            }
+
+            if (!string.IsNullOrEmpty(gld.NewWishGarmentsIds))
+            {
+                List<int> newWishGarmentsIds = new List<int>();
+                foreach (string id in gld.NewWishGarmentsIds.Split(','))
+                    if (!string.IsNullOrEmpty(id) && id != " ")
+                        newWishGarmentsIds.Add(Convert.ToInt32(id));
+                gld.NewWishGarments = garmentRepository.GetByIds(newWishGarmentsIds);
+            }
+
+            if (gld.FashionFlavors != null)
+            {
+                gld.Silouhettes = silouhetteRepository.GetByFlavors(gld.FashionFlavors, gld.EventTypes) as List<Silouhette>;
+                if (gld.Silouhettes != null)
+                {
+                    gld.Fabrics = fabricRepository.GetForSilouhette(gld.Silouhettes[0], gld.EventTypes);
+                    gld.FabricId = gld.Fabrics[0].Id;
+                    gld.SilouhetteId = gld.Silouhettes[0].Id;
+                    Pattern solid = patternRepository.GetSolid();
+                    gld.Garments = garmentRepository.GetBySelection(gld.Silouhettes[0], gld.Fabrics[0], solid, gld.EventTypes) as List<Garment>;
+                    gld.PatternId = solid.Id;
+                    gld.Patterns = patternRepository.GetAll();
+                }
+            }
+            IList<FashionFlavor> flavors = fashionFlavorRepository.GetAll();
+            foreach (FashionFlavor flavor in flavors)
+                if(!gld.FashionFlavors.Exists(delegate(FashionFlavor record) { if (record.Id == flavor.Id) { return true; } return false; }))
+                    gld.FashionFlavorsAlternative.Add(flavor);
+        }
+
+        [ObjectFilter(Param = "selection", RootType = typeof(Selection))]
+        public ActionResult Search(Selection selection)
+        {
+            IList<EventType> selectedET;
+            MembershipUser mu = Membership.GetUser();
+            if (mu == null)
+                selectedET = (List<EventType>)Session["EventTypeSelected"];
+            else
+                selectedET = registeredUserRepository.GetByMembershipId(Convert.ToInt32(mu.ProviderUserKey)).EventTypes;
+            List<jsonGarment> finalResult = new List<jsonGarment>();
+
+            List<Garment> result = garmentRepository.GetBySelection(silouhetteRepository.Get(selection.SilouhetteId), new Fabric(selection.FabricId), new Pattern(selection.PatternId), selectedET) as List<Garment>;
+            if (result != null)
+                foreach (Garment garment in result)
+                    finalResult.Add(new jsonGarment(garment));
+
+            return Json(finalResult);
+        }
+
+        [ObjectFilter(Param = "selection", RootType = typeof(Selection))]
+        public ActionResult GetSilouhette(Selection selection)
+        {
+            Silouhette silouhette = silouhetteRepository.Get(selection.SilouhetteId);
+            IList<EventType> selectedET;
+            MembershipUser mu = Membership.GetUser();
+            if (mu == null)
+                selectedET = (List<EventType>)Session["EventTypeSelected"];
+            else
+                selectedET = registeredUserRepository.GetByMembershipId(Convert.ToInt32(mu.ProviderUserKey)).EventTypes;
+            IList<Fabric> fabrics = fabricRepository.GetForSilouhette(silouhette, selectedET);
+            SilouhetteSelection silouhetteSelection = new SilouhetteSelection(silouhette.AvailablePatterns, fabrics);
+            silouhetteSelection.FabricId = fabricRepository.GetForSilouhette(silouhette, selectedET)[0].Id;
+
+            return Json(silouhetteSelection);
+        }
+
+        public ViewResult GoToRegistration(string myGarmentsItems, string myWishListItems)
+        {
+            string[] myGarmentsArray = myGarmentsItems.Split(',');
+            string[] myWishListArray = myWishListItems.Split(',');
+
+            List<Garment> mygarments = new List<Garment>();
+            List<Garment> mywishlist = new List<Garment>();
+
+            List<int> mygarmentsids = new List<int>();
+            List<int> fashionflavorsids = new List<int>();
+
+            if (myGarmentsArray.Length > 0)
+                foreach (string garment in myGarmentsArray)
+                    if (!string.IsNullOrEmpty(garment))
+                    {
+                        mygarments.Add(garmentRepository.Get(Convert.ToInt32(garment)));
+                        mygarmentsids.Add(Convert.ToInt32(garment));
+                    }
+            if (myWishListArray.Length > 0)
+                foreach (string garment in myWishListArray)
+                    if (!string.IsNullOrEmpty(garment))
+                        mywishlist.Add(garmentRepository.Get(Convert.ToInt32(garment)));
+
+            foreach (FashionFlavor ff in (IList<FashionFlavor>)Session["FashionFlavorSelected"])
+                fashionflavorsids.Add(ff.Id);
+            //if(new OutfitEngineServiceProxy.OutfitEngineServiceClient().HasValidCombinations(mygarmentsids, fashionflavorsids))
+            {
+                Session["MyGarments"] = mygarments;
+                Session["MyWishList"] = mywishlist;
+
+                Response.Redirect(Url.RouteUrl(new { controller = "Registration", action = "Index" }));    
+            }
+            GarmentsListData gld = GetGarmentsListDataForNewUser();
+
+            string garmentsIds = "";
+            string wishGarmentsIds = "";
+            foreach (Garment garment in mygarments)
+                garmentsIds += garment.Id + ",";
+            foreach (Garment garment in mywishlist)
+                wishGarmentsIds += garment.Id + ",";
+            if(garmentsIds.Length > 0)
+                garmentsIds = garmentsIds.Substring(0, garmentsIds.Length - 1);
+            if (wishGarmentsIds.Length > 0)
+                wishGarmentsIds = wishGarmentsIds.Substring(0, wishGarmentsIds.Length - 1);
+            gld.NewGarments = mygarments;
+            gld.NewGarmentsIds = garmentsIds;
+            gld.NewWishGarments = mywishlist;
+            gld.NewWishGarmentsIds = wishGarmentsIds;
+            gld.Error = "We can't create any combinations with the selected garments.";
+
+            return View("Index", gld);
+        }
+
+        
+        public RedirectToRouteResult GoToMyGarments(string myGarmentsItems, string myWishListItems)
+        {
+            string[] myGarmentsArray = myGarmentsItems.Split(',');
+            string[] myWishListArray = myWishListItems.Split(',');
+
+            IList<Garment> myGarments = new List<Garment>();
+            List<int> myGarmentsIds = new List<int>();
+            IList<Garment> myWishGarments = new List<Garment>();
+            List<int> myWishGarmentsIds = new List<int>();
+
+            if (myGarmentsArray.Length > 0)
+                foreach (string garment in myGarmentsArray)
+                    if (!string.IsNullOrEmpty(garment) && Web.Common.Common.IsNumber(garment))
+                        myGarmentsIds.Add(Convert.ToInt32(garment));
+            if (myWishListArray.Length > 0)
+                foreach (string garment in myWishListArray)
+                    if (!string.IsNullOrEmpty(garment) && Web.Common.Common.IsNumber(garment))
+                        myWishGarmentsIds.Add(Convert.ToInt32(garment));
+
+            garmentRepository.DbContext.BeginTransaction();
+            myGarments = garmentRepository.GetByIds(myGarmentsIds);
+            myWishGarments = garmentRepository.GetByIds(myWishGarmentsIds);
+            List<int> newGarmentsIds = new List<int>();
+            RegisteredUser user = registeredUserRepository.Get(this.UserId);
+            if (myGarments.Count > 0)
+            {
+                foreach (Garment garment in myGarments)
+                    if(!user.Closet.HasGarment(garment))
+                    {
+                        user.Closet.AddGarment(garment);
+                        newGarmentsIds.Add(garment.Id);
+                    }
+                registeredUserRepository.SaveOrUpdate(user);
+            }
+
+            if (myWishGarments.Count > 0)
+            {
+                WishList wl = wishListRepository.GetForUser(this.ProxyLoggedUser);
+                if (wl == null)
+                {
+                    wl = new WishList();
+                    wl.User = this.ProxyLoggedUser;
+                }
+                foreach (Garment garment in myWishGarments)
+                    wl.AddGarment(garment);
+                wishListRepository.SaveOrUpdate(wl);
+            }
+
+            garmentRepository.DbContext.CommitTransaction();
+
+            if (newGarmentsIds.Count > 0)
+                // Update the closet combinations
+                new OutfitEngineServiceProxy.OutfitEngineServiceClient().AddOutfitsAsync(user.Closet.Id, newGarmentsIds);
+
+            return RedirectToAction("Index", "MyGarments");
+        }
+    }
+}
